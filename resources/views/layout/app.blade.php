@@ -11,8 +11,29 @@
 
     <link rel="stylesheet" href="css/app.css">
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Style -->
+    <style>
+    *{
+        font-family: 'League Spartan', sans-serif;
+    }
+    .sqbtn {
+      color: black;
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 0;
+      padding: 10px 20px; /* Adjust padding as needed */
+      transition: all 0.3s ease; /* Smooth transition */
+    }
+    
+    .square-btn:hover {
+      background-color: black;
+      color: white;
+    }
+  </style>
 
     <!-- Scripts -->
     @yield('headscripts')
