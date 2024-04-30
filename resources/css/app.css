@@ -1,0 +1,15 @@
+.part1{
+    min-height: 800px;
+}
+
+.part2{
+    min-height:800px;
+    background: linear-gradient(to top, #8C314A  ,#3B295E,#242763);
+}
+.part2_1{
+    font-size:60px
+}
+
+.part2_2{
+    margin-top: 200px;
+}

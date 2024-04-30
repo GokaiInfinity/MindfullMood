@@ -1,4 +1,4 @@
-<div class = "container">
+<div class = "container part1">
     <div class = "row">
         <div class = "col-md-7 font-serif fs-4 lh-sm d-grid gap-5">
             <div class="mb-5">
