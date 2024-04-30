@@ -21,17 +21,26 @@
         font-family: 'League Spartan', sans-serif;
     }
     .sqbtn {
-      color: black;
-      background-color: white;
-      border: 2px solid black;
-      border-radius: 0;
-      padding: 10px 20px; /* Adjust padding as needed */
-      transition: all 0.3s ease; /* Smooth transition */
+        color: black;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 0;
+        padding: 10px 20px; /* Adjust padding as needed */
+        transition: all 0.3s ease; /* Smooth transition */
+    }
+
+    .donh {
+        position: relative;
+    }
+    .donalign {
+        font-weight: 700;
+        font-size: 50pt;
+        color: white;
     }
 
     .square-btn:hover {
-      background-color: black;
-      color: white;
+        background-color: black;
+        color: white;
     }
   </style>
 
