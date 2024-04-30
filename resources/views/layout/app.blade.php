@@ -34,7 +34,7 @@
     }
     .donalign {
         font-weight: 700;
-        font-size: 50pt;
+        font-size: 72pt;
         color: white;
     }
 
