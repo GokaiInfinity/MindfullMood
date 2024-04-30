@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
-    
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <!-- Style -->
     <style>
     *{
@@ -28,7 +28,7 @@
       padding: 10px 20px; /* Adjust padding as needed */
       transition: all 0.3s ease; /* Smooth transition */
     }
-    
+
     .square-btn:hover {
       background-color: black;
       color: white;
