@@ -26,7 +26,7 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('home') }}">
+            <a class="navbar-brand brand" href="{{ route('home') }}">
                 MindfullMood
             </a>
 
