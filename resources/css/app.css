@@ -1,7 +1,38 @@
+/* layout.app */
+
+*{
+    font-family: 'League Spartan', sans-serif;
+}
+
+.sqbtn {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 0;
+    padding: 10px 20px; /* Adjust padding as needed */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.donh {
+    position: relative;
+}
+.donalign {
+    font-weight: 700;
+    font-size: 72pt;
+    color: white;
+}
+
+.square-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+/* part1 */
 .part1{
     min-height: 800px;
 }
 
+/* part2 */
 .part2{
     min-height:800px;
     background: linear-gradient(to top, #8C314A  ,#3B295E,#242763);
@@ -12,4 +43,15 @@
 
 .part2_2{
     margin-top: 200px;
+}
+
+/* part3 */
+.part3{
+    min-height: 850px;
+    /* z-index: 1; */
+    transition: top 0.3s ease;
+}
+
+.motto{
+    font-size: 50px;
 }
