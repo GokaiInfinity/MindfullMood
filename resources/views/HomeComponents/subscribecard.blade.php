@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title">Subscribe to our newsletter</h5>
+        <h5 class="card-title card-text-color">Subscribe to our newsletter</h5>
         {{-- Email form, checkbox for subscription, and button --}}
         <form action="/"method="post">
             @csrf
@@ -13,7 +13,7 @@
                 <label class="form-check-label" for="exampleCheck1">Subscribe for your newsletter</label>
             </div>
             <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-primary w-100">SUBSCRIBE NOW</button>
+                <button type="submit" class="btn subbutton text-white w-100">SUBSCRIBE NOW</button>
             </div>
         </form>
     </div>

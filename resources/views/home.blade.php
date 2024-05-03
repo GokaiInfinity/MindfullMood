@@ -2,8 +2,8 @@
 
 @section('content')
 @vite('resources/css/app.css')
-@include('Components.part1')
-@include('Components.part2')
-@include('Components.part3')
-@include('Components.donationcard')
+@include('HomeComponents.part1')
+@include('HomeComponents.part2')
+@include('HomeComponents.part3')
+@include('HomeComponents.donationcard')
 @endsection

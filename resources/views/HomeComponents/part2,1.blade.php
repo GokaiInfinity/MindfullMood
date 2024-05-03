@@ -12,10 +12,10 @@
         all of your mental health needs.
     </div>
     {{-- image asset --}}
-    <div class="col-md-3">
-        <img src="{{ asset('storage/look_at_each_other.webp') }}" alt="Image">
+    <div class="col-md-5    ">
+        <img src="{{ asset('storage/look_at_each_other.webp') }}" alt="Image" class="img-fluid">
     </div>
-    <div class="col-md-4">
+    <div class="col-md-2">
     </div>
 
 </div>
