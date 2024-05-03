@@ -116,6 +116,10 @@
     background-color: var(--blue2);
 }
 
+.navbutton:hover{
+    background-color: var(--red2);
+}
+
 .card-text-color{
     color: var(--blue2);
 }

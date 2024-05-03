@@ -1,25 +1,24 @@
-<div class="container-fluid" style="background-color:aliceblue" >
+<div class="container-fluid" style="background-color:#15184D" >
     <footer>
         
-    <div class="container">
-    <div class="row row-cols-1 row-cols-md-3">
-      <div class="col">
-        <h5>Section 1</h5>
-        <ul class="list-unstyled">
-          <li><a href="#">Page 1</a></li>
-          <li><a href="#">Page 2</a></li>
-          <li><a href="#">Page 3</a></li>
-        </ul>
+    <div class="container pt-2 pb-5">
+      <div class="row row-cols-1 row-cols-md-3 text-white pb-5">
+        <div class="col">
+          <ul class="list-unstyled">
+            <li><a href="#">VISION</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">GET INVOLVED</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="list-unstyled">
+            <li><a href="#">X</a></li>
+            <li><a href="#">INSTAGRAM</a></li>
+            <li><a href="#">FACEBOOK</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="col">
-        <h5>Section 2</h5>
-        <ul class="list-unstyled">
-          <li><a href="#">Page 4</a></li>
-          <li><a href="#">Page 5</a></li>
-          <li><a href="#">Page 6</a></li>
-        </ul>
-      </div>
-    </div>
+      <p class="text-white">&copy; 2024 by Mindful Mood</p>
   </div>
     
 </div>
