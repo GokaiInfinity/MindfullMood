@@ -20,13 +20,13 @@
 
     <!-- Scripts -->
     @yield('headscripts')
-    @vite(['resources/sass/app.scss', 'resources/js/app.js','resources/css/headerfooter.css'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/headerfooter.css'])
 </head>
 
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
         <div class="container-fluid px-4">
-            <div class="d-flex homedonate">
+            <div class="d-flex homedonate" id="homedonate">
                 <a href="{{ route('home') }}" class="navbar-brand" href="{{ route('home') }}">
                     MindfullMood
                 </a>
@@ -122,12 +122,10 @@
         </div>
     </nav> --}}
 
-    <main class="py-4 mt-5">
+    <main>
         @yield('content')
     </main>
-
     @include('layout.footer')
-    </div>
 </body>
 
 </html>

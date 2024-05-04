@@ -14,7 +14,7 @@
 }
 
 .border1{
-    border: 1px solid black;
+    border: 1px solid var(--blue2);
     padding-top: 10px;
     padding-bottom: 10px;
     cursor: pointer;

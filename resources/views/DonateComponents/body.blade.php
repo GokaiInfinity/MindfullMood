@@ -14,34 +14,43 @@
             <div>
                 Frequency
             </div>
-            <div class="row col-md-12 mx-1 text-center my-2">
+            {{-- Frequency Row --}}
+            <div class="row col-md-12 ms-1 gap-2 text-center my-2">
                 <div class="col-md-5 border1 select1">
                     One Time
                 </div>
-                <div class="col-md-5 border1 mx-1 select1">
+                <div class="col-md-5 border1 select1">
                     Monthly
                 </div>
             </div>
+
             <div>
                 Amount
             </div>
-            <div class="row col-md-12 mx-1 text-center my-2">
+            {{-- Amount Row --}}
+            <div class="row col-md-12 ms-1 text-center my-2 gap-2">
                 <div class="col-md-2 border1 select2" data-value="10">
                     Rp 10,00
                 </div>
-                <div class="col-md-2 border1 mx-1 select2" data-value="50">
+                <div class="col-md-2 border1 select2" data-value="50">
                     Rp 50,00
                 </div>
-                <div class="col-md-2 border1 mx-1 select2" data-value="100">
+                <div class="col-md-2 border1  select2" data-value="100">
                     Rp 100,00
                 </div>
-                <div class="col-md-2 border1 mx-1 select2" data-value="200">
+                <div class="col-md-2 border1  select2" data-value="200">
                     Rp 200,00
                 </div>
-                <div class="col-md-2 border1 mx-1 select2" data-value="other">
+                <div class="col-md-2 border1 select2" data-value="other">
                     Other
                 </div>
             </div>
+
+            {{-- Other amount input --}}
+            <div id="other-amount-input" class="col-md-12 mt-2 d-none">
+                <input type="text" class="form-control" name="other-amount" placeholder="Enter Amount">
+            </div>
+
             <button class="col-md-12 donatebut my-4" type="button">
                 Donate
             </button>
@@ -82,9 +91,17 @@
             // Add 'selected' class to the clicked option
             option.classList.add('selected');
 
-            // Optional: Perform additional actions based on the selected option
+            // Show/hide 'other' amount input based on the value
             const selectedValue = option.dataset.value;
+            if (selectedValue === 'other') {
+                document.getElementById('other-amount-input').classList.remove('d-none');
+            } else {
+                document.getElementById('other-amount-input').classList.add('d-none');
+            }
+
             console.log('Selected value:', selectedValue);
         });
     });
 </script>
+
+

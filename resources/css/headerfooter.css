@@ -28,6 +28,19 @@
     }
 
 }
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-in {
+    animation: slideInFromLeft 0.5s ease;
+}
+
 /* When the navbar-brand is hovered */
 .homedonate:hover {
     animation: shiftAndZoom 0.3s forwards;
