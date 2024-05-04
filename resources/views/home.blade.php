@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('content')
-@vite('resources/css/app.css')
+@vite('resources/css/home.css')
 @include('HomeComponents.part1')
 @include('HomeComponents.part2')
 @include('HomeComponents.part3')
