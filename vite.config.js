@@ -6,6 +6,7 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/css/app.css',
+                'resources/css/headerfooter.css',
                 'resources/js/app.js',
                 'resources/css/donate.css'
             ],

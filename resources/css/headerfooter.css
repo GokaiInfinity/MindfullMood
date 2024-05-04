@@ -1,0 +1,64 @@
+/* define variable */
+:root {
+    --red2: #C50502;
+    --blue2: #15184D;
+}
+/* layout.app */
+
+/* *{
+    font-family: 'League Spartan', sans-serif;
+} */
+
+.donate-button {
+    width: 120px;
+    height:40px;
+    border-radius: 10px;
+    border: 2px solid var(--red2);
+    background-color: var(--red2);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Define keyframes for the shift left animation */
+@keyframes shiftAndZoom {
+    from {
+        transform: translateX(0) scale(1.0);
+    }
+    to {
+        transform: translateX(-20px) scale(1.1); /* Adjust the -10px as needed */
+    }
+
+}
+/* When the navbar-brand is hovered */
+.homedonate:hover {
+    animation: shiftAndZoom 0.3s forwards;
+}
+
+.donate-button:hover{
+    background-color: var(--blue2);
+    border: 2px solid var(--blue2);
+}
+
+.sqbtn {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0;
+    padding: 15px 40px; /* Adjust padding as needed */
+    transition: all 0.3s ease; /* Smooth transition */
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.donh {
+    position: relative;
+}
+.donalign {
+    font-weight: 700;
+    font-size: 72pt;
+    color: white;
+}
+
+.sqbtn:hover {
+    background-color: black;
+    color: white;
+}

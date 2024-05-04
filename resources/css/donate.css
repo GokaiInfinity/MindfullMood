@@ -1,0 +1,40 @@
+:root {
+    --red2: #C50502;
+    --blue2: #15184D;
+    --dimcolor: #949495;
+}
+.part2{
+    min-height:800px;
+    background-color: #CBCCD1;
+}
+
+.makedonate{
+    font-size:50px;
+    font-weight: 600;
+}
+
+.border1{
+    border: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.donatebut{
+    background-color: var(--blue2);
+    border:var(--blue2);
+    color:white;
+    height:50px;
+    transition: background-color 0.3s;
+}
+
+.donatebut:hover{
+    background-color:var(--dimcolor);
+    border:var(--dimcolor)
+}
+
+/* Style for selected options */
+.selected {
+    background-color: white; /* Example background color for selected option */
+
+}
