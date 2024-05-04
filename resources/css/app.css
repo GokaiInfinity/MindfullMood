@@ -41,10 +41,12 @@
 .sqbtn {
     color: black;
     background-color: white;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 0;
-    padding: 10px 20px; /* Adjust padding as needed */
+    padding: 15px 40px; /* Adjust padding as needed */
     transition: all 0.3s ease; /* Smooth transition */
+    text-decoration: none;
+    font-weight: 300;
 }
 
 .donh {
@@ -56,7 +58,7 @@
     color: white;
 }
 
-.square-btn:hover {
+.sqbtn:hover {
     background-color: black;
     color: white;
 }
@@ -103,6 +105,11 @@
     background-color: var(--blue2);
     transition: background-color 0.3s;
 }
+
+.newscard{
+    font-weight: 300;
+}
+
 
 .subbutton:hover{
     background-color: var(--red2);
