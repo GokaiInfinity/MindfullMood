@@ -5,5 +5,4 @@
 @include('HomeComponents.part1')
 @include('HomeComponents.part2')
 @include('HomeComponents.part3')
-@include('HomeComponents.donationcard')
 @endsection
