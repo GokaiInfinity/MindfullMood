@@ -3,7 +3,34 @@
     --red2: #C50502;
     --blue2: #15184D;
 }
+
+.sqbtn {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0;
+    padding: 15px 40px; /* Adjust padding as needed */
+    transition: all 0.3s ease; /* Smooth transition */
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.donh {
+    position: relative;
+}
+.donalign {
+    font-weight: 700;
+    font-size: 72pt;
+    color: white;
+}
+
+.sqbtn:hover {
+    background-color: black;
+    color: white;
+}
+
 /* layout.app */
+
 
 
 .stickysec {
@@ -106,6 +133,9 @@
     font-size: 100px;
     font-weight: 900;
 }
+
+
+
 
 /* donation card */
 .donationcard{
