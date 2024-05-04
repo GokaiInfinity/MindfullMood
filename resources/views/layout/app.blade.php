@@ -122,7 +122,7 @@
         </div>
     </nav> --}}
 
-    <main>
+    <main class="mt-4">
         @yield('content')
     </main>
     @include('layout.footer')
