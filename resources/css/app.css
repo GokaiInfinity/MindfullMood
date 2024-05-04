@@ -84,6 +84,10 @@
     transform: scale(1.05);
 }
 
+.underable:hover{
+    text-decoration: none;
+}
+
 .mm{
 
     /* Apply a linear gradient as the background */
