@@ -1,6 +1,6 @@
 @extends('layout.app')
 
 @section('content')
-@vite(['resources/css/donate.css','resources/js/donatescript.js'])
+@vite('resources/css/donate.css')
 @include('DonateComponents.body')
 @endsection

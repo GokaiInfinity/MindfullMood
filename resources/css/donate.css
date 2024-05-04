@@ -3,6 +3,10 @@
     --blue2: #15184D;
     --dimcolor: #949495;
 }
+.part2{
+    min-height:800px;
+    background-color: #CBCCD1;
+}
 
 .makedonate{
     font-size:50px;
