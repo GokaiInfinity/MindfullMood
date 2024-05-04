@@ -1,7 +1,7 @@
-<div class = "container part1">
+<div class = "container part1 mt-5">
     <div class = "row">
         <div class = "col-md-6 mt-5 font-serif fs-5 lh-sm d-grid gap-5 part1_1">
-            <div class="mb-5 col-sm-12">
+            <div class="mb-5">
                 At Mindful Mood, we believe that everyone deserves access to quality mental healthcare. That is why we
                 are proud to offer our services to people all over the world. Our team consists of professionals from
                 diverse backgrounds, who are all dedicated to using their skills and knowledge to help people who are

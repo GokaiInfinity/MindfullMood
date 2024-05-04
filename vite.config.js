@@ -9,7 +9,6 @@ export default defineConfig({
                 'resources/css/home.css',
                 'resources/css/headerfooter.css',
                 'resources/js/app.js',
-                'resources/js/homescript.js',
                 'resources/css/donate.css',
                 'resources/js/donatescript.js'
             ],
