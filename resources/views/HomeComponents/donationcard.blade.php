@@ -8,8 +8,8 @@
 
     <div class="row mx-auto my-5">
 
-        <div class="col-md-2 mb-4 ">
-            <div class="card donh card1">>
+        <div class="col-md-2 mb-4 donatecard" >
+            <div class="card donh card1">
                 <div class="card-body justify-content-end d-flex flex-wrap">
                     <ul class="text-white">
                         <li class="donlistia">You get a free access for the finished website for 5 days</li>
@@ -18,8 +18,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-4 ">
-            <div class="card donh card2">>
+        <div class="col-md-3 mb-4 donatecard" >
+            <div class="card donh card2">
                 <div class="card-body justify-content-end d-flex flex-wrap">
                     <ul class="text-white">
                         <li class="donlistia">You get a free access for the finished website for 2 weeks</li>
@@ -29,8 +29,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-4 ">
-            <div class="card donh card3">>
+        <div class="col-md-3 mb-4 donatecard" >
+            <div class="card donh card3">
                 <div class="card-body justify-content-end d-flex flex-wrap">
                     <ul class="text-white donlist">
                         <li class="donlistia">You get a free access for the finished website for 5 weeks</li>
@@ -40,8 +40,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 mb-4 ">
-            <div class="card donh card4">>
+        <div class="col-md-4 mb-4 donatecard" >
+            <div class="card donh card4">
                 <div class="card-body justify-content-end d-flex flex-wrap">
                     <ul class="text-white donlist">
                         <li class="donlistia">You get a free access for the finished website for 3 months</li>

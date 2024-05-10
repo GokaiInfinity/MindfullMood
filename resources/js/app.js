@@ -19,3 +19,21 @@ function applySlideInAnimation() {
 }
 // Attach the function to the window.onload event
 window.onload = applySlideInAnimation;
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Fetch all elements with the class 'donatecard'
+    const donateCards = document.querySelectorAll('.donatecard');
+
+    // Add click event listener to each card
+    donateCards.forEach(function(card) {
+        card.addEventListener('click', function() {
+            // Remove 'selected' class from all cards
+            donateCards.forEach(function(c) {
+                c.classList.remove('selected','no-hover');
+            });
+
+            // Add 'selected' class to the clicked card
+            card.classList.add('selected', 'no-hover');
+        });
+    });
+});
