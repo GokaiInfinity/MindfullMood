@@ -8,6 +8,6 @@ class PsikologController extends Controller
 {
     public function index(Request $request)
     {
-        return view('trymepsikolog');
+        return view('tryme.trymepsikolog');
     }
 }

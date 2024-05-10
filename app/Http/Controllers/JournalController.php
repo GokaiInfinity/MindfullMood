@@ -8,6 +8,6 @@ class JournalController extends Controller
 {
     public function index(Request $request)
     {
-        return view('trymejournal');
+        return view('tryme.trymejournal');
     }
 }
