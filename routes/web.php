@@ -36,3 +36,7 @@ Route::get('/trymejournal',[JournalController::class, 'index'])->name('trymejour
 
 //Try Me Psikolog Route
 Route::get('/trymepsikolog',[PsikologController::class, 'index'])->name('trymepsikolog');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
