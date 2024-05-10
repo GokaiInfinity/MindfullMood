@@ -99,6 +99,10 @@
                         <a class="navbutton nav-link rounded-pill fw-bold text-white px-4 py-2"
                             href="{{ route('news') }}">Get Involved</a>
                     </li>
+                    <li class="nav-item px-2">
+                        <a class="navbutton nav-link rounded-pill fw-bold text-white px-4 py-2"
+                            href="{{ route('trymenu') }}">Try Me</a>
+                    </li>
                     @guest
                         @if (Route::has('login'))
                             <li class="nav-item">

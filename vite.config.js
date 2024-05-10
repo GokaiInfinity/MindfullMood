@@ -11,7 +11,8 @@ export default defineConfig({
                 'resources/js/app.js',
                 'resources/js/homescript.js',
                 'resources/css/donate.css',
-                'resources/js/donatescript.js'
+                'resources/js/donatescript.js',
+                'resources/css/tryme.css'
             ],
             refresh: true,
         }),
