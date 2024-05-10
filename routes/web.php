@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DonateController;
 use App\Http\Controllers\TrymeController;
 use App\Http\Controllers\JournalController;
@@ -24,6 +25,7 @@ Route::get('/news', [NewsController::class, 'index'])->name('news');
 Route::get('/login',[LoginController::class,'index'])->name('login');
 
 // Register Route
+Route::get('/register',[RegisterController::class,'index'])->name('register');
 
 //Try Me page
 Route::get('/tryme',[TrymeController::class,'index'])->name('trymenu');
