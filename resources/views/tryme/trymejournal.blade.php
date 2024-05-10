@@ -1,29 +1,37 @@
 @extends('layout.app')
 
 @section('content')
-    <div class="container mt-5">
-        <div class="col pt-5">
+    @vite("resources/css/trymejournal.css")
+    <div class="mt-5">
+        <div class="col-12 pt-5">
+            <div class="row">
+                <div class="col-10">
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-primary">Write/Add new Journal</button>
+                </div>
+            </div>
             <div>
                 <h2 class="text-center">My Journals</h2>
             </div>
             <table class="table">
                 <thead class="thead-dark text-center">
                     <tr>
-                        <th scope="col">Journal No</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Content</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Action</th>
+                        <th scope="col" class="col-1">Journal No</th>
+                        <th scope="col" class="col-2">Title</th>
+                        <th scope="col" class="col-4">Content</th>
+                        <th scope="col" class="col-2">Date</th>
+                        <th scope="col" class="col-3">Action</th>
                     </tr>
                 </thead>
                 <tbody class="text-center">
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>12-05-2024</td>
-                        <td>
-                            <button class="btn btn-primary">See Journal</button>
+                        <th scope="row" class="col-1">1</th>
+                        <td class="col-2 text-truncate">Mark</td>
+                        <td class="col-4 text-truncate">dsfsafsdfsaffdsdafsdfsdfsadfsdafsadfdsfsdafdsafasfdsfsdfsadfLoremipsusdofksaonvwokdjndfsfsdfsdfasvoksnvmoknsamlkvnm;dclkvcnmsa;oidfnewao;ifnoifnceoisanfco;senfikosedsdfsfsdfsdfsdfsavcxvxssdfsfsfsfnfva;osfvewsifnawosfnoinio</td>
+                        <td class="col-2 text-truncate">12-05-2024</td>
+                        <td class="col-3 text-truncate">
+                            <button class="btn btn-secondary">See Journal</button>
                             <button class="btn btn-warning">Edit Journal</button>
                             <button class="btn btn-danger">Delete Journal</button>
                         </td>
