@@ -55,7 +55,7 @@
     <div class="row mx-auto">
         <a class="nav-link rounded-pill fw-bold bg-danger text-white text-center px-4 py-2"
             href="{{ route('vision') }}">
-            DONATE
+            PURCHASE
         </a>
     </div>
 </div>
