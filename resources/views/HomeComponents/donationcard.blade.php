@@ -1,4 +1,6 @@
 <div class="col px-5 py-3 donationcard justify-content-center">
+    <div class="py-5">
+    </div>
     <div class="dono1 fs-3">WE'RE GRATEFUL
         FOR YOUR SUPPORT!
     </div>
