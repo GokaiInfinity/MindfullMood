@@ -5,11 +5,14 @@
     <div class="container pt-5">
         <div class="col">
             <div class="row py-5">
+                <div class="fs-2 text-center fw-bold">
+                    Try These Features
+                </div>
             </div>
             <div class="row">
 
                     <div class="card mx-auto" style="width: 18rem;">
-                        <img class="card-img-top" src="URL_OF_YOUR_IMAGE_1" alt="My Journal Image">
+                        <img class="card-img-top" src="{{ asset('storage/Journal.jpeg') }}" alt="My Journal Image">
                         <div class="card-body">
                             <h3 class="card-title">My Journal</h3>
                             <a href="{{ route('trymejournal') }}" class="stretched-link"></a>
@@ -18,7 +21,7 @@
                     </div>
 
                     <div class="card mx-auto" style="width: 18rem;">
-                        <img class="card-img-top" src="URL_OF_YOUR_IMAGE_2" alt="My Psikolog Image">
+                        <img class="card-img-top" src="{{ asset('storage/Psikolog.jpeg') }}" alt="My Psikolog Image">
                         <div class="card-body">
                             <h3 class="card-title">My Psikolog</h3>
                             <a href="{{ route('trymepsikolog') }}" class="stretched-link"></a>
