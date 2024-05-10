@@ -11,28 +11,28 @@
         <div class="col-md-2 mb-4 ">
             <div class="card donh card1">>
                 <div class="card-body align-content-end flex-wrap">
-                    <p class="card-text donalign d-flex justify-content-end">$25</p>
+                    <p class="card-text donalign d-flex justify-content-end">Rp 250rb</p>
                 </div>
             </div>
         </div>
         <div class="col-md-3 mb-4 ">
             <div class="card donh card2">>
                 <div class="card-body align-content-end flex-wrap">
-                    <p class="card-text donalign d-flex justify-content-end">$50</p>
+                    <p class="card-text donalign d-flex justify-content-end">Rp 500rb</p>
                 </div>
             </div>
         </div>
         <div class="col-md-3 mb-4 ">
             <div class="card donh card3">>
                 <div class="card-body align-content-end flex-wrap">
-                    <p class="card-text donalign d-flex justify-content-end">$100</p>
+                    <p class="card-text donalign d-flex justify-content-end">Rp 1jt</p>
                 </div>
             </div>
         </div>
         <div class="col-md-4 mb-4 ">
             <div class="card donh card4">>
                 <div class="card-body align-content-end flex-wrap">
-                    <p class="card-text donalign d-flex justify-content-end">$200</p>
+                    <p class="card-text donalign d-flex justify-content-end">Rp 2jt</p>
                 </div>
             </div>
         </div>

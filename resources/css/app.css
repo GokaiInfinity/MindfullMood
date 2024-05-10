@@ -18,11 +18,7 @@
 .donh {
     position: relative;
 }
-.donalign {
-    font-weight: 700;
-    font-size: 72pt;
-    color: white;
-}
+
 
 .sqbtn:hover {
     background-color: black;
@@ -141,6 +137,13 @@
 .donationcard{
     background-color: rgb(197, 197, 197);
     min-height: 900px;
+}
+
+
+.donalign {
+    font-weight: 700;
+    font-size: 32pt;
+    color: white;
 }
 
 .dono1{
