@@ -11,6 +11,9 @@
         <div class="col-md-2 mb-4 ">
             <div class="card donh card1">>
                 <div class="card-body align-content-end flex-wrap">
+                    <ul class="text-white">
+                        <li>You get a free access for the finished website for 5 days</li>
+                    </ul>
                     <p class="card-text donalign d-flex justify-content-end">Rp 250rb</p>
                 </div>
             </div>
@@ -18,6 +21,10 @@
         <div class="col-md-3 mb-4 ">
             <div class="card donh card2">>
                 <div class="card-body align-content-end flex-wrap">
+                    <ul class="text-white">
+                        <li>You get a free access for the finished website for 2 weeks</li>
+                        <li>Have high priority for the server for 5 weeks</li>
+                    </ul>
                     <p class="card-text donalign d-flex justify-content-end">Rp 500rb</p>
                 </div>
             </div>
@@ -25,6 +32,10 @@
         <div class="col-md-3 mb-4 ">
             <div class="card donh card3">>
                 <div class="card-body align-content-end flex-wrap">
+                    <ul class="text-white donlist">
+                        <li>You get a free access for the finished website for 5 weeks</li>
+                        <li>Have high priority for the server for 10 weeks</li>
+                    </ul>
                     <p class="card-text donalign d-flex justify-content-end">Rp 1jt</p>
                 </div>
             </div>
@@ -32,6 +43,10 @@
         <div class="col-md-4 mb-4 ">
             <div class="card donh card4">>
                 <div class="card-body align-content-end flex-wrap">
+                    <ul class="text-white donlist">
+                        <li>You get a free access for the finished website for 3 months</li>
+                        <li>Have highest priority for the server for 1 month, and a high priority for the 2 weeks after</li>
+                    </ul>
                     <p class="card-text donalign d-flex justify-content-end">Rp 2jt</p>
                 </div>
             </div>

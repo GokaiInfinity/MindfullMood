@@ -30,16 +30,16 @@
             {{-- Amount Row --}}
             <div class="row col-md-12 ms-1 text-center my-2 gap-2">
                 <div class="col-md-2 border1 select2" data-value="10">
-                    Rp 10,00
+                    Rp 250rb
                 </div>
                 <div class="col-md-2 border1 select2" data-value="50">
-                    Rp 50,00
+                    Rp 500rb
                 </div>
                 <div class="col-md-2 border1  select2" data-value="100">
-                    Rp 100,00
+                    Rp 1jt
                 </div>
                 <div class="col-md-2 border1  select2" data-value="200">
-                    Rp 200,00
+                    Rp 2jt
                 </div>
                 <div class="col-md-2 border1 select2" data-value="other">
                     Other
