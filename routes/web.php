@@ -5,6 +5,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DonateController;
+use App\Http\Controllers\JournalController;
+use App\Http\Controllers\PsikologController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -21,3 +23,9 @@ Route::get('/news', [NewsController::class, 'index'])->name('news');
 Route::get('/login',[LoginController::class,'index'])->name('login');
 
 // Register Route
+
+//Try Me Journal Route
+Route::get('/trymejournal',[JournalController::class, 'index'])->name('trymejournal');
+
+//Try Me Psikolog Route
+Route::get('/trymepsikolog',[PsikologController::class, 'index'])->name('trymepsikolog');
