@@ -36,10 +36,10 @@ Route::get('/tryme',[TrymeController::class,'index'])->name('trymenu');
 //Try Me Journal Route
 Route::get('/trymejournal',[TryjournalController::class, 'index'])->name('trymejournal');
 Route::get('/trymejournal/{tryjournal}', [TryjournalController::class, 'show'])->name('trymejournal.show');
-Route::get('/trymejournal',[TryjournalController::class, 'addjournalpage'])->name('trymejournal.create');
-Route::post('/trymejournal/addjournal',[TryjournalController::class, 'addjournal'])->name('trymejournal.store');
+Route::get('/trymejournal/addjournal/create',[TryjournalController::class, 'addjournalpage'])->name('trymejournal.create');
+Route::post('/trymejournal/addjournal/store',[TryjournalController::class, 'addjournal'])->name('trymejournal.store');
 Route::get('/trymejournal/edit/{tryjournal}', [TryjournalController::class, 'editjournal'])->name('trymejournal.edit');
-Route::put('/trymejournal/{tryjournal}', [TryjournalController::class, 'updatejournal'])->name('trymejournal.update');
+Route::put('/trymejournal/update/{tryjournal}', [TryjournalController::class, 'updatejournal'])->name('trymejournal.update');
 Route::delete('/trymejournal/destroy/{tj}', [TryjournalController::class, 'destroy'])->name('trymejournal.destroy');
 
 //Try Me Psikolog Route

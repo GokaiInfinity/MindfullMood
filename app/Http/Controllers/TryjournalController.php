@@ -21,8 +21,7 @@ class TryjournalController extends Controller
 
     public function addjournalpage()
     {
-        $trymejournals = tryjournal::all();
-        return view('tryme.trymejournal', compact('trymejournals'));
+        return view('tryme.createjournal');
     }
 
     public function addjournal(Request $request)
