@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
@@ -10,6 +11,7 @@ use App\Http\Controllers\JournalController;
 use App\Http\Controllers\MainPageController;
 use App\Http\Controllers\PsikologController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\TryjournalController;
 
 Route::get('/', [MainPageController::class, 'index'])->name('home');
 
@@ -32,7 +34,14 @@ Route::get('/register',[RegisterController::class,'index'])->name('register');
 Route::get('/tryme',[TrymeController::class,'index'])->name('trymenu');
 
 //Try Me Journal Route
-Route::get('/trymejournal',[JournalController::class, 'index'])->name('trymejournal');
+Route::get('/trymejournal',[TryjournalController::class, 'index'])->name('trymejournal');
+Route::get('/trymejournal/{tryjournal}', [TryjournalController::class, 'show'])->name('trymejournal.show');
+Route::get('/trymejournal/addjournal',[TryjournalController::class, 'addjournalpage'])->name('addtrymejournal');
+Route::post('/trymejournal/addjournal',[TryjournalController::class, 'addjournal'])->name('addingtrymejournal');
+Route::get('/trymejournal/edit/{tryjournal}', [TryjournalController::class, 'editjournal'])->name('trymejournal.edit');
+Route::put('/trymejournal/{tryjournal}', [TryjournalController::class, 'updatejournal'])->name('trymejournal.update');
+
+Route::delete('/trymejournal/destroy/{tj}', [TryjournalController::class, 'destroy'])->name('trymejournal.destroy');
 
 //Try Me Psikolog Route
 Route::get('/trymepsikolog',[PsikologController::class, 'index'])->name('trymepsikolog');

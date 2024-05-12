@@ -1,14 +1,16 @@
 @extends('layout.app')
 
 @section('content')
-    @vite("resources/css/trymejournal.css")
+    @vite('resources/css/trymejournal.css')
     <div class="mt-5">
         <div class="col-12 pt-5">
             <div class="row">
                 <div class="col-10">
                 </div>
                 <div class="col-2">
-                    <button class="btn btn-primary">Write/Add new Journal</button>
+                    <a href="{{ route('addtrymejournal') }}">
+                        <button class="btn btn-primary"> Write/Add new Journal</button>
+                    </a>
                 </div>
             </div>
             <div>
@@ -25,29 +27,37 @@
                     </tr>
                 </thead>
                 <tbody class="text-center">
-                    <tr>
-                        <th scope="row" class="col-1">1</th>
-                        <td class="col-2 text-truncate">Mark</td>
-                        <td class="col-4 text-truncate">dsfsafsdfsaffdsdafsdfsdfsadfsdafsadfdsfsdafdsafasfdsfsdfsadfLoremipsusdofksaonvwokdjndfsfsdfsdfasvoksnvmoknsamlkvnm;dclkvcnmsa;oidfnewao;ifnoifnceoisanfco;senfikosedsdfsfsdfsdfsdfsavcxvxssdfsfsfsfnfva;osfvewsifnawosfnoinio</td>
-                        <td class="col-2 text-truncate">12-05-2024</td>
-                        <td class="col-3 text-truncate">
-                            <button class="btn btn-secondary">See Journal</button>
-                            <button class="btn btn-warning">Edit Journal</button>
-                            <button class="btn btn-danger">Delete Journal</button>
-                        </td>
-                    </tr>
-                    {{-- <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>12-05-2024</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>12-05-2024</td>
-                    </tr> --}}
+                    {{-- foreach trymejournals with index --}}
+
+                    @foreach ($trymejournals as $index => $trymejournal)
+                        <tr>
+                            <th scope="row" class="col-1">{{ $index + 1 }}</th>
+                            <td class="col-2 text-truncate">{{ $trymejournal->title }}</td>
+                            <td class="col-4 text-truncate">
+                                {{ $trymejournal->content }}
+                            </td>
+                            <td class="col-2 text-truncate">{{ $trymejournal->date }}</td>
+                            <td class="col-3 text-truncate">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="{{ route('trymejournal.show', ['tryjournal' => $trymejournal]) }}" class="btn btn-secondary">See Journal</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="{{ route('trymejournal.edit', ['tryjournal' => $trymejournal]) }}" class="btn btn-warning">Edit Journal</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <form action="{{ route('trymejournal.destroy', ['tj' => $trymejournal]) }}" method="POST" style="display: inline-block;">
+                                            @method('delete')
+                                            @csrf
+                                            <button type="submit" class="btn btn-danger" id="delete" name='delete'>Delete</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </td>
+
+
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
