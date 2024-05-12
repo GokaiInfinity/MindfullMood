@@ -8,7 +8,7 @@
                     <div class="card-header">Create Journal Entry</div>
 
                     <div class="card-body">
-                        <form action="{{ route('addtrymejournal') }}" method="POST">
+                        <form action="{{ route('trymejournal.store') }}" method="POST">
                             @csrf
 
                             <div class="form-group">

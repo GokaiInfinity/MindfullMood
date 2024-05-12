@@ -13,9 +13,9 @@ use App\Http\Controllers\PsikologController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TryjournalController;
 
-Route::get('/', [MainPageController::class, 'index'])->name('home');
+Route::get('/', [MainPageController::class, 'index'])->name('home1');
 
-Route::get('/home', [MainPageController::class, 'index'])->name('home1');
+Route::get('/mainpage', [MainPageController::class, 'index'])->name('home2');
 
 Route::get('/vision', [MainPageController::class, 'index'])->name('vision');
 
@@ -36,11 +36,10 @@ Route::get('/tryme',[TrymeController::class,'index'])->name('trymenu');
 //Try Me Journal Route
 Route::get('/trymejournal',[TryjournalController::class, 'index'])->name('trymejournal');
 Route::get('/trymejournal/{tryjournal}', [TryjournalController::class, 'show'])->name('trymejournal.show');
-Route::get('/trymejournal/addjournal',[TryjournalController::class, 'addjournalpage'])->name('addtrymejournal');
-Route::post('/trymejournal/addjournal',[TryjournalController::class, 'addjournal'])->name('addingtrymejournal');
+Route::get('/trymejournal',[TryjournalController::class, 'addjournalpage'])->name('trymejournal.create');
+Route::post('/trymejournal/addjournal',[TryjournalController::class, 'addjournal'])->name('trymejournal.store');
 Route::get('/trymejournal/edit/{tryjournal}', [TryjournalController::class, 'editjournal'])->name('trymejournal.edit');
 Route::put('/trymejournal/{tryjournal}', [TryjournalController::class, 'updatejournal'])->name('trymejournal.update');
-
 Route::delete('/trymejournal/destroy/{tj}', [TryjournalController::class, 'destroy'])->name('trymejournal.destroy');
 
 //Try Me Psikolog Route

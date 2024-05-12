@@ -8,7 +8,7 @@
                 <div class="col-10">
                 </div>
                 <div class="col-2">
-                    <a href="{{ route('addtrymejournal') }}">
+                    <a href="{{ route('trymejournal.create') }}">
                         <button class="btn btn-primary"> Write/Add new Journal</button>
                     </a>
                 </div>
@@ -30,7 +30,7 @@
                     {{-- foreach trymejournals with index --}}
 
                     @foreach ($trymejournals as $index => $trymejournal)
-                        <tr>
+                        <tr >
                             <th scope="row" class="col-1">{{ $index + 1 }}</th>
                             <td class="col-2 text-truncate">{{ $trymejournal->title }}</td>
                             <td class="col-4 text-truncate">
@@ -54,8 +54,6 @@
                                     </div>
                                 </div>
                             </td>
-
-
                         </tr>
                     @endforeach
                 </tbody>
