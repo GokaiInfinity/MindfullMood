@@ -20,6 +20,18 @@ class ForumController extends Controller
         return view('tryme.forum', compact('forums'));
     }
 
+    public function show(Forum $forum){
+        return view('tryme.forumdetail', compact('forum'));
+    }
+
+
+    public function create()
+    {
+        return view('tryme.createforum');
+    }
+
+
+
 
     public function destroy(Forum $f)
     {

@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class forum extends Model
 {
+    use HasFactory;
+
     public $timestamps = false;
 
     protected $casts = [

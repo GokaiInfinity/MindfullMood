@@ -21,6 +21,15 @@
                     </div>
 
                     <div class="card mx-auto" style="width: 18rem;">
+                        <img class="card-img-top" src="{{ asset('storage/Community.webp') }}" alt="My Journal Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Forum</h3>
+                            <a href="{{ route('forum') }}" class="stretched-link"></a>
+                            <p class="card-text">Browse the Forum and meet other people online.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mx-auto" style="width: 18rem;">
                         <img class="card-img-top" src="{{ asset('storage/Psikolog.jpeg') }}" alt="My Psikolog Image">
                         <div class="card-body">
                             <h3 class="card-title">My Psikolog</h3>
