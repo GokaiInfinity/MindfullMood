@@ -29,6 +29,40 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="font_color">Font Color:</label>
+                                <input type="color" class="form-control" id="font_color" name="font_color"
+                                    value="{{ old('font_color') }}">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="font_format">Font Format:</label>
+                                <select class="form-control" id="font_format" name="font_format">
+                                    <option value="normal" {{ old('font_format') === 'normal' ? 'selected' : '' }}>Normal</option>
+                                    <option value="italic" {{ old('font_format') === 'italic' ? 'selected' : '' }}>Italic</option>
+                                    <option value="bold" {{ old('font_format') === 'bold' ? 'selected' : '' }}>Bold</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="font_family">Font Family:</label>
+                                <select class="form-control" id="font_family" name="font_family">
+                                    <option value="Arial" {{ old('font_family') === 'Arial' ? 'selected' : '' }}>Arial</option>
+                                    <option value="Calibri" {{ old('font_family') === 'Calibri' ? 'selected' : '' }}>Calibri</option>
+                                    <option value="Comic Sans MS" {{ old('font_family') === 'Comic Sans MS' ? 'selected' : '' }}>Comic Sans MS</option>
+                                    <option value="Courier New" {{ old('font_family') === 'Courier New' ? 'selected' : '' }}>Courier New</option>
+                                    <option value="Georgia" {{ old('font_family') === 'Georgia' ? 'selected' : '' }}>Georgia</option>
+                                    <option value="Tahoma" {{ old('font_family') === 'Tahoma' ? 'selected' : '' }}>Tahoma</option>
+                                    <option value="Times New Roman" {{ old('font_family') === 'Times New Roman' ? 'selected' : '' }}>Times New Roman</option>
+                                    <option value="Verdana" {{ old('font_family') === 'Verdana' ? 'selected' : '' }}>Verdana</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="enter_new_line" name="enter_new_line" {{ old('enter_new_line') ? 'checked' : '' }}>
+                                <label class="form-check-label" for="enter_new_line">Enter for New Line</label>
+                            </div>
+
+                            <div class="form-group">
                                 <label for="mood">Mood:</label>
                                 <input type="text" class="form-control" id="mood" name="mood"
                                     value="{{ old('mood') }}">
@@ -38,6 +72,11 @@
                                 <label for="tags">Tags:</label>
                                 <input type="text" class="form-control" id="tags" name="tags"
                                     value="{{ old('tags') }}">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="emoji">Emoji:</label>
+                                <input type="text" class="form-control" id="emoji" name="emoji" value="{{ old('emoji') }}">
                             </div>
 
                             <div class="form-group">
@@ -53,4 +92,10 @@
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#emoji').emojiPicker();
+        });
+    </script>
 @endsection
