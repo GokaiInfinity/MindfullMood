@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div>
-                <h2 class="text-center">My Journals</h2>
+                <h2 class="text-center">All Journals</h2>
             </div>
             <div class="d-flex justify-content-end mb-3">
                 <div class="col-2">
@@ -67,7 +67,7 @@
                                     </div>
                                     <div class="col-4">
                                         <form action="{{ route('trymejournal.destroy', ['tj' => $trymejournal]) }}"
-                                            method="POST">
+                                            method="POST" onsubmit="return confirm('Are you sure you want to delete this journal?')">
                                             @method('delete')
                                             @csrf
                                             <button type="submit" class="btn btn-danger" id="delete"
