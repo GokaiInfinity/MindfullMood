@@ -25,6 +25,9 @@ return new class extends Migration
             $table->text('attachments')->nullable();
             $table->boolean('deleted')->default(false);
             $table->integer('version')->default(1);
+            $table->string('font_color')->nullable();
+            $table->enum('font_format', ['normal', 'italic', 'bold'])->default('normal');
+            $table->enum('font_family', ['Arial', 'Calibri', 'Comic Sans MS', 'Courier New', 'Georgia', 'Tahoma', 'Times New Roman', 'Verdana'])->default('Arial');
         });
     }
 

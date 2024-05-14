@@ -21,7 +21,6 @@ class tryjournal extends Model
         'title',
         'content',
         'date_created',
-        'date_modified',
         'mood',
         'tags',
         'location',
@@ -29,6 +28,9 @@ class tryjournal extends Model
         'attachments',
         'deleted',
         'version',
+        'font_color',
+        'font_format',
+        'font_family',
     ];
 
 }

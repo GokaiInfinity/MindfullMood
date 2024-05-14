@@ -14,7 +14,7 @@
                             <div class="form-group">
                                 <label for="date_created">Date Created:</label>
                                 <input type="datetime-local" class="form-control" id="date_created" name="date_created"
-                                    value="{{ old('date_created') }}" required>
+                                    value="{{ old('date_created') }}">
                             </div>
 
                             <div class="form-group">
@@ -31,7 +31,7 @@
                             <div class="form-group">
                                 <label for="font_color">Font Color:</label>
                                 <input type="color" class="form-control" id="font_color" name="font_color"
-                                    value="{{ old('font_color') }}">
+                                    value="{{ old('font_color', '#000000') }}">
                             </div>
 
                             <div class="form-group">
@@ -55,11 +55,6 @@
                                     <option value="Times New Roman" {{ old('font_family') === 'Times New Roman' ? 'selected' : '' }}>Times New Roman</option>
                                     <option value="Verdana" {{ old('font_family') === 'Verdana' ? 'selected' : '' }}>Verdana</option>
                                 </select>
-                            </div>
-
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="enter_new_line" name="enter_new_line" {{ old('enter_new_line') ? 'checked' : '' }}>
-                                <label class="form-check-label" for="enter_new_line">Enter for New Line</label>
                             </div>
 
                             <div class="form-group">

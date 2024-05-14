@@ -36,21 +36,25 @@ class TryjournalController extends Controller
         $request->validate([
             'title' => 'required',
             'content' => 'required',
-            'date_created' => 'required|date_format:Y-m-d\TH:i',
+            'date_created' => 'nullable|date_format:Y-m-d\TH:i',
             'mood' => 'nullable|string',
             'tags' => 'nullable|string',
             'location' => 'nullable|string',
         ]);
 
         // Create tryjournals
-        tryjournal::create([
+        Tryjournal::create([
             'title' => $request->title,
             'content' => $request->content,
-            'date_created' => $request->date_created,
+            'date_created' => $request->date_created ?? now(),
             'mood' => $request->mood,
             'tags' => $request->tags,
             'location' => $request->location,
+            'font_color' => $request->font_color ?? '#000000',
+            'font_format' => $request->font_format,
+            'font_family' => $request->font_family,
         ]);
+
 
         // Redirect
         return redirect()->route('trymejournal');
@@ -79,6 +83,9 @@ class TryjournalController extends Controller
             'mood' => $request->mood,
             'tags' => $request->tags,
             'location' => $request->location,
+            'font_color' => $request->font_color ?? '#000000',
+            'font_format' => $request->font_format,
+            'font_family' => $request->font_family,
         ]);
 
         return redirect()->route('trymejournal');
