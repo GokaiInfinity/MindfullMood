@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ForumController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TrymeController;
 use App\Http\Controllers\DonateController;
@@ -44,6 +45,9 @@ Route::delete('/trymejournal/destroy/{tj}', [TryjournalController::class, 'destr
 
 //Try Me Psikolog Route
 Route::get('/trymepsikolog',[PsikologController::class, 'index'])->name('trymepsikolog');
+
+//Try Me Forum Route
+Route::get('/forum',[ForumController::class, 'index'])->name('forum');
 
 Auth::routes();
 
