@@ -16,13 +16,31 @@
             <div>
                 <h2 class="text-center">My Journals</h2>
             </div>
+            <div class="d-flex justify-content-end mb-3">
+                <div class="col-2">
+                    <form action="{{ route('trymejournal') }}" method="GET" id="sortForm">
+                        <div class="input-group">
+                            <select class="form-select" name="sort" id="sort">
+                                <option value="date_created" @if (request('sort') == 'date_created') selected @endif>Sort by date
+                                </option>
+                                <option value="mood" @if (request('sort') == 'mood') selected @endif>Sort by mood
+                                </option>
+                                <option value="title" @if (request('sort') == 'title') selected @endif>Sort by title
+                                </option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <table class="table">
                 <thead class="thead-dark text-center">
                     <tr>
                         <th scope="col" class="col-1">Journal No</th>
                         <th scope="col" class="col-2">Title</th>
-                        <th scope="col" class="col-4">Content</th>
-                        <th scope="col" class="col-2">Date</th>
+                        <th scope="col" class="col-2">Date Created</th>
+                        <th scope="col" class="col-2">Mood</th>
+                        <th scope="col" class="col-2">Tags</th>
+                        <th scope="col" class="col-2">Location</th>
                         <th scope="col" class="col-3">Action</th>
                     </tr>
                 </thead>
@@ -30,26 +48,30 @@
                     {{-- foreach trymejournals with index --}}
 
                     @foreach ($trymejournals as $index => $trymejournal)
-                        <tr >
+                        <tr>
                             <th scope="row" class="col-1">{{ $index + 1 }}</th>
                             <td class="col-2 text-truncate">{{ $trymejournal->title }}</td>
-                            <td class="col-4 text-truncate">
-                                {{ $trymejournal->content }}
-                            </td>
-                            <td class="col-2 text-truncate">{{ $trymejournal->date }}</td>
-                            <td class="col-3 text-truncate">
-                                <div class="row">
+                            <td class="col-2 text-truncate">{{ $trymejournal->date_created }}</td>
+                            <td class="col-2 text-truncate">{{ $trymejournal->mood }}</td>
+                            <td class="col-2 text-truncate">{{ $trymejournal->tags }}</td>
+                            <td class="col-2 text-truncate">{{ $trymejournal->location }}</td>
+                            <td class="col-2">
+                                <div class="col d-flex align-items-center">
                                     <div class="col-4">
-                                        <a href="{{ route('trymejournal.show', ['tryjournal' => $trymejournal]) }}" class="btn btn-secondary">See Journal</a>
+                                        <a href="{{ route('trymejournal.show', ['tryjournal' => $trymejournal]) }}"
+                                            class="btn btn-secondary ">See Journal</a>
                                     </div>
                                     <div class="col-4">
-                                        <a href="{{ route('trymejournal.edit', ['tryjournal' => $trymejournal]) }}" class="btn btn-warning">Edit Journal</a>
+                                        <a href="{{ route('trymejournal.edit', ['tryjournal' => $trymejournal]) }}"
+                                            class="btn btn-warning ">Edit Journal</a>
                                     </div>
                                     <div class="col-4">
-                                        <form action="{{ route('trymejournal.destroy', ['tj' => $trymejournal]) }}" method="POST" style="display: inline-block;">
+                                        <form action="{{ route('trymejournal.destroy', ['tj' => $trymejournal]) }}"
+                                            method="POST">
                                             @method('delete')
                                             @csrf
-                                            <button type="submit" class="btn btn-danger" id="delete" name='delete'>Delete</button>
+                                            <button type="submit" class="btn btn-danger" id="delete"
+                                                name='delete'>Delete Journal</button>
                                         </form>
                                     </div>
                                 </div>
@@ -59,5 +81,10 @@
                 </tbody>
             </table>
         </div>
+    </div>
+    <script>
+        document.getElementById('sort').addEventListener('change', function() {
+            document.getElementById('sortForm').submit();
+        });
+    </script>
     @endsection
-</div>

@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -14,9 +15,16 @@ return new class extends Migration
         Schema::create('tryjournals', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('content');
-            // datetime format
-            $table->date('date');
+            $table->text('content');
+            $table->datetime('date_created')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->datetime('date_modified')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->string('mood')->nullable();
+            $table->string('tags')->nullable();
+            $table->string('location')->nullable();
+            $table->string('weather')->nullable();
+            $table->text('attachments')->nullable();
+            $table->boolean('deleted')->default(false);
+            $table->integer('version')->default(1);
         });
     }
 

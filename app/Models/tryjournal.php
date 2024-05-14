@@ -9,8 +9,26 @@ class tryjournal extends Model
 {
     use HasFactory;
 
+    // Enable timestamps
     public $timestamps = false;
 
-    protected $fillable = ["title", "content","date"];
+    protected $casts = [
+        'date_created' => 'datetime',
+    ];
+
+    // Specify the fillable attributes
+    protected $fillable = [
+        'title',
+        'content',
+        'date_created',
+        'date_modified',
+        'mood',
+        'tags',
+        'location',
+        'weather',
+        'attachments',
+        'deleted',
+        'version',
+    ];
 
 }

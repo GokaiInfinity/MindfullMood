@@ -8,9 +8,16 @@ use App\Http\Controllers\Controller;
 
 class TryjournalController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $trymejournals = tryjournal::all();
+        $sortOptions = ['date_created', 'mood', 'title'];
+        $sort = in_array($request->query('sort'), $sortOptions) ? $request->query('sort') : 'date_created';
+        $direction = $request->query('direction', 'desc');
+
+        $query = Tryjournal::orderBy($sort, $direction);
+
+        $trymejournals = $query->paginate(10);
+
         return view('tryme.trymejournal', compact('trymejournals'));
     }
 
@@ -26,18 +33,23 @@ class TryjournalController extends Controller
 
     public function addjournal(Request $request)
     {
-
         $request->validate([
             'title' => 'required',
             'content' => 'required',
-            'date' => 'required',
+            'date_created' => 'required|date_format:Y-m-d\TH:i',
+            'mood' => 'nullable|string',
+            'tags' => 'nullable|string',
+            'location' => 'nullable|string',
         ]);
 
         // Create tryjournals
         tryjournal::create([
             'title' => $request->title,
             'content' => $request->content,
-            'date' => $request->date
+            'date_created' => $request->date_created,
+            'mood' => $request->mood,
+            'tags' => $request->tags,
+            'location' => $request->location,
         ]);
 
         // Redirect
@@ -54,17 +66,24 @@ class TryjournalController extends Controller
         $request->validate([
             'title' => 'required',
             'content' => 'required',
-            'date' => 'required',
+            'date_created' => 'required|date_format:Y-m-d\TH:i',
+            'mood' => 'nullable|string',
+            'tags' => 'nullable|string',
+            'location' => 'nullable|string',
         ]);
 
         $tryjournal->update([
             'title' => $request->title,
             'content' => $request->content,
-            'date' => $request->date
+            'date_created' => $request->date_created,
+            'mood' => $request->mood,
+            'tags' => $request->tags,
+            'location' => $request->location,
         ]);
 
         return redirect()->route('trymejournal');
     }
+
 
     public function destroy(Tryjournal $tj)
     {
