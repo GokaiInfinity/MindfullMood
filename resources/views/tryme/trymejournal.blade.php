@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('content')
-    @vite('resources/css/trymejournal.css')
+    @vite(['resources/css/trymejournal.css', 'resources/js/tryjournal.js'])
     <div class="mt-5">
         <div class="col-12 pt-5">
             <div class="row">
@@ -82,9 +82,4 @@
             </table>
         </div>
     </div>
-    <script>
-        document.getElementById('sort').addEventListener('change', function() {
-            document.getElementById('sortForm').submit();
-        });
-    </script>
     @endsection

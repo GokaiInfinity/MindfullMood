@@ -75,11 +75,6 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="emoji">Emoji:</label>
-                                <input type="text" class="form-control" id="emoji" name="emoji" value="{{ old('emoji') }}">
-                            </div>
-
-                            <div class="form-group">
                                 <label for="location">Location:</label>
                                 <input type="text" class="form-control" id="location" name="location"
                                     value="{{ old('location') }}">
@@ -93,9 +88,4 @@
         </div>
     </div>
 
-    <script>
-        $(document).ready(function() {
-            $('#emoji').emojiPicker();
-        });
-    </script>
 @endsection
