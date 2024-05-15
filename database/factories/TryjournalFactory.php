@@ -19,7 +19,7 @@ class TryjournalFactory extends Factory
         return [
            'title' => fake()->sentence(),
            'content' => fake()->paragraph(),
-           'date' => fake()->date(),
+           'date_created' => fake()->date(),
         ];
     }
 }

@@ -18,12 +18,18 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
+        /*User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
             'password' => Hash::make('password'),
             'email_verified_at' => now(),
             'remember_token' => Str::random(10),
+        ]);*/
+        $this->call([
+            ForumSeeder::class
+        ]);
+        $this->call([
+            TryjournalSeeder::class
         ]);
     }
 }

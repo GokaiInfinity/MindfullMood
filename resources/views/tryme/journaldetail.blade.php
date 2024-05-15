@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('content')
-@vite('resources/css/try.css')
+@vite('resources/css/tryme.css')
 {{-- Generate A Journal Detail --}}
 <div class="container">
     <div class="row">

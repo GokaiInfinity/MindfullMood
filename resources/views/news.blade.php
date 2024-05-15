@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('content')
-@vite('resources/css/app.css')
+@vite('resources/sass/app.scss')
 <div class="col px-5 py-5">
     <div class="row mx-auto py-4">
         <div class="col-sm-4">
