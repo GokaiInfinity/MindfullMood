@@ -1,15 +1,9 @@
-import 'emoji-picker-element';
 
-document.addEventListener('DOMContentLoaded', function() {
-    const emojiInput = document.getElementById('emoji');
-    const picker = new EmojiPickerElement();
-    picker.addEventListener('emoji-click', (event) => {
-        const { emoji } = event.detail;
-        emojiInput.value += emoji;
+    document.addEventListener('DOMContentLoaded', () => {
+        const picker = document.querySelector('#emoji-picker');
+        const input = document.querySelector('#mood');
+
+        picker.addEventListener('emoji-click', event => {
+            input.value += event.detail.unicode;
+        });
     });
-    emojiInput.after(picker);
-});
-
-document.getElementById('sort').addEventListener('change', function() {
-    document.getElementById('sortForm').submit();
-});

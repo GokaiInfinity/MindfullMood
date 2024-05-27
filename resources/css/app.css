@@ -46,7 +46,7 @@
 
 .mmtitle{
     /* Apply a linear gradient as the background */
-    background: linear-gradient(45deg, #ffffff,gray);
+    background: linear-gradient(45deg, #2023AE,#f7f7f7);
 
     /* Use WebKit background clip property to clip the background to the text */
     -webkit-background-clip: text;
@@ -64,6 +64,42 @@
     background-color: #2023ae;
     border: 1px solid #2023ae;
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Optional: add a slight movement */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sequence1, .sequence2, .sequence3, .sequence4 {
+    opacity: 0;
+}
+
+.sequence1 {
+    animation: fadeIn 1s forwards;
+    animation-delay: 0s;
+}
+
+.sequence2 {
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+}
+
+.sequence3 {
+    animation: fadeIn 1s forwards;
+    animation-delay: 2s;
+}
+
+.sequence4 {
+    animation: fadeIn 1s forwards;
+    animation-delay: 3s;
+}
+
 /* part1 */
 .part1{
     min-height: 800px;
@@ -87,8 +123,8 @@
 
 .feature-card2{
     background-color: #262AD1;
-}
 
+}
 
 .feature-card3{
     background-color: #242763;
@@ -110,6 +146,20 @@
     font-size: 2rem; /* Adjust the font size as desired */
 }
 
+.sequencepart1_1, .sequencepart1_2{
+    opacity: 0;
+}
+
+.sequencepart1_1{
+    animation: fadeIn 1s forwards;
+    animation-delay: 0s;
+}
+
+.sequencepart1_2{
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+}
+
 .subbutton{
     background-color: var(--blue2);
     transition: background-color 0.3s;
@@ -127,6 +177,10 @@
 
 .card-text-color{
     color: var(--blue2);
+}
+
+.our-feature{
+    font-size:4rem;
 }
 
 /* part2 */

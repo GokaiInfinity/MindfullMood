@@ -1,3 +1,12 @@
 .text-truncate {
     max-width: 200px;
 }
+
+.custom-card{
+    background-color:#15184D
+}
+
+
+.form-group, .card-header{
+    color: white;
+}

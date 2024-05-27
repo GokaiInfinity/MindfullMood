@@ -14,7 +14,7 @@ export default defineConfig({
                 'resources/js/donatescript.js',
                 'resources/css/forum.css',
                 'resources/css/tryme.css',
-                'resources/css/trymejournal.css'
+                'resources/css/trymejournal.css',
             ],
             refresh: true,
         }),
