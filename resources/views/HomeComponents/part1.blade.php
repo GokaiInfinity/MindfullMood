@@ -22,7 +22,7 @@
             <h1 class="mb-5 text-white">
                 Our Features:
             </h1>
-            <div class="row">
+            <div class="row mx-auto">
                 <div class="col-md-4 mb-3">
                     <div class="card text-white feature-card1" style="max-width: 18rem;">
                         <div class="card-body">

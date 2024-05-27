@@ -16,7 +16,7 @@
                     <ul class="text-white">
                         <li class="donlistia">You get a free access for the finished website for 5 days</li>
                     </ul>
-                    <p class="card-text donalign d-flex justify-content-end">Rp 250rb</p>
+                    <p class="card-text donalign d-flex justify-content-end">Rp 100rb</p>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@
                         <li class="donlistia">You get a free access for the finished website for 2 weeks</li>
                         <li class="donlistia">Have high priority for the server for 5 weeks</li>
                     </ul>
-                    <p class="card-text donalign d-flex justify-content-end">Rp 500rb</p>
+                    <p class="card-text donalign d-flex justify-content-end">Rp 150rb</p>
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@
                         <li class="donlistia">You get a free access for the finished website for 5 weeks</li>
                         <li class="donlistia">Have high priority for the server for 10 weeks</li>
                     </ul>
-                    <p class="card-text donalign d-flex justify-content-end">Rp 1jt</p>
+                    <p class="card-text donalign d-flex justify-content-end">Rp 250rb</p>
                 </div>
             </div>
         </div>
@@ -49,13 +49,13 @@
                         <li class="donlistia">You get a free access for the finished website for 3 months</li>
                         <li class="donlistia">Have highest priority for the server for 1 month, and a high priority for the 2 weeks after</li>
                     </ul>
-                    <p class="card-text donalign d-flex justify-content-end">Rp 2jt</p>
+                    <p class="card-text donalign d-flex justify-content-end">Rp 500rb</p>
                 </div>
             </div>
         </div>
     </div>
     <div class="row mx-auto">
-        <a class="nav-link rounded-pill fw-bold bg-danger text-white text-center px-4 py-2"
+        <a class="nav-link rounded-pill fw-bold purchasebutton text-white text-center px-4 py-2"
             href="{{ route('vision') }}">
             PURCHASE
         </a>

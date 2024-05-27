@@ -41,12 +41,12 @@
 }
 
 .welcomepartbackground{
-    background: linear-gradient(to top, #8C314A  ,#3B295E,#242763);
+    background-color: #206aae;
 }
 
 .mmtitle{
     /* Apply a linear gradient as the background */
-    background: linear-gradient(45deg, #8B8CD6,#CD2623,#EC9F9E);
+    background: linear-gradient(45deg, #ffffff,gray);
 
     /* Use WebKit background clip property to clip the background to the text */
     -webkit-background-clip: text;
@@ -61,13 +61,13 @@
 }
 
 .tryfeaturebutton{
-    background: linear-gradient(90deg, #cf3000,#fb6767,#EC9F9E);
-    border: 1px solid #cf3000;
+    background-color: #2023ae;
+    border: 1px solid #2023ae;
 }
 /* part1 */
 .part1{
     min-height: 800px;
-    background: linear-gradient(to bottom, #8C314A  ,#3B295E,#242763);
+    background-color:#206AAE;
 }
 
 /* .part1_1{
@@ -82,11 +82,11 @@
 } */
 
 .feature-card1{
-    background-color: #8C314A;
+    background-color: #1A1C8B;
 }
 
 .feature-card2{
-    background-color: #3B295E;
+    background-color: #262AD1;
 }
 
 
@@ -132,7 +132,7 @@
 /* part2 */
 .part2{
     min-height:800px;
-    background: linear-gradient(to top, #8C314A  ,#3B295E,#242763);
+    background-color:#242763;
 }
 .part2_1{
     font-size:60px
@@ -147,7 +147,7 @@
     min-height: 850px;
     /* z-index: 1; */
     transition: top 0.3s ease;
-    background: linear-gradient(to top, #8C314A  ,#3B295E,#242763);
+    background: linear-gradient(to top, #4a90e2  ,#00bcd4,#242763);
 }
 
 .motto{
@@ -186,7 +186,7 @@
 
 
 .donationcard{
-    background: linear-gradient(to bottom, #8C314A  ,#3B295E,#242763);
+    background-color: #4a90e2;
     min-height: 900px;
 }
 
@@ -242,4 +242,7 @@
 }
 .card4{
     background-color: #000038;
+}
+.purchasebutton{
+    background-color: #b71c1c;
 }

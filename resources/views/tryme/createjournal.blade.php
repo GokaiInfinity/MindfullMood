@@ -12,7 +12,7 @@
                             @csrf
 
                             <div class="form-group">
-                                <label for="date_created">Date Created:</label>
+                                <label for="date_created">Time Created:</label>
                                 <input type="datetime-local" class="form-control" id="date_created" name="date_created"
                                     value="{{ old('date_created') }}">
                             </div>
@@ -20,12 +20,12 @@
                             <div class="form-group">
                                 <label for="title">Title:</label>
                                 <input type="text" class="form-control" id="title" name="title"
-                                    value="{{ old('title') }}" required>
+                                    value="{{ old('title') }}" required placeholder="What are you thinking today?">
                             </div>
 
                             <div class="form-group">
                                 <label for="content">Content:</label>
-                                <textarea class="form-control" id="content" name="content" rows="6" required>{{ old('content') }}</textarea>
+                                <textarea class="form-control" id="content" name="content" rows="6" required placeholder="What happened today?">{{ old('content') }}</textarea>
                             </div>
 
                             <div class="form-group">
@@ -60,19 +60,19 @@
                             <div class="form-group">
                                 <label for="mood">Mood:</label>
                                 <input type="text" class="form-control" id="mood" name="mood"
-                                    value="{{ old('mood') }}">
+                                    value="{{ old('mood') }}" placeholder="How are you feeling today?">
                             </div>
 
                             <div class="form-group">
                                 <label for="tags">Tags:</label>
                                 <input type="text" class="form-control" id="tags" name="tags"
-                                    value="{{ old('tags') }}">
+                                    value="{{ old('tags') }}" placeholder="Enter tags separated by commas(Optional)">
                             </div>
 
                             <div class="form-group">
                                 <label for="location">Location:</label>
                                 <input type="text" class="form-control" id="location" name="location"
-                                    value="{{ old('location') }}">
+                                    value="{{ old('location') }}" placeholder="Where are you right now?">
                             </div>
 
                             <button type="submit" class="btn btn-primary">Save Journal Entry</button>
