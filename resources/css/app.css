@@ -147,6 +147,7 @@
     min-height: 850px;
     /* z-index: 1; */
     transition: top 0.3s ease;
+    background: linear-gradient(to top, #8C314A  ,#3B295E,#242763);
 }
 
 .motto{
@@ -185,7 +186,7 @@
 
 
 .donationcard{
-    background-color: rgb(197, 197, 197);
+    background: linear-gradient(to bottom, #8C314A  ,#3B295E,#242763);
     min-height: 900px;
 }
 
@@ -201,10 +202,10 @@
 }
 
 .dono1{
-    color:darkblue;
+    color:white;
 }
 .dono2{
-    color:black;
+    color:white;
 }
 
 .card{

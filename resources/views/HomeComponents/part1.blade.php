@@ -27,7 +27,7 @@
                     <div class="card text-white feature-card1" style="max-width: 18rem;">
                         <div class="card-body">
                             <h5 class="card-title fs-4">My Personal Journal</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">Write Your Own Personal Journal to vent your emotions, we will keep your journal safe and secure.</p>
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                     <div class="card text-white feature-card2" style="max-width: 18rem;">
                         <div class="card-body fs-4">
                             <h5 class="card-title">Blog</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">Make a thread about your thoughts.</p>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                     <div class="card text-white feature-card3" style="max-width: 18rem;">
                         <div class="card-body fs-4">
                             <h5 class="card-title">Video Call</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">Make a video call with our trusted psychologist.</p>
                         </div>
                     </div>
                 </div>
