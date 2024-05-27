@@ -76,7 +76,10 @@
     color: white;
 }
 
-.navbutton:nth-of-type(1){
+.topcolor{
+    background-color: var(--blue2);
+}
+/* .navbutton:nth-of-type(1){
     background-color: var(--blue2);
 }
 
@@ -90,4 +93,4 @@
 
 .navbutton:hover{
     background-color: var(--red2);
-}
+} */
