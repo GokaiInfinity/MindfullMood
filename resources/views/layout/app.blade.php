@@ -24,17 +24,17 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
+    <nav class="navbar navbar-expand-md navbar-light topcolor shadow-sm fixed-top">
         <div class="container-fluid px-4">
             <div class="d-flex homedonate" id="homedonate">
-                <a href="{{ route('home') }}" class="navbar-brand" href="{{ route('home') }}">
+                <a href="{{ route('home') }}" class="navbar-brand text-white" href="{{ route('home') }}">
                     MindfullMood
                 </a>
-                <a href="{{ route('donate') }}">
+                {{-- <a href="{{ route('donate') }}">
                     <button class="button text-white px-4 donate-button">
                         Donate
                     </button>
-                </a>
+                </a> --}}
             </div>
 
             {{-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -88,35 +88,35 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item px-2">
-                        <a class="navbutton nav-link rounded-pill fw-bold text-white px-4 py-2"
+                        <a class="nav-link fw-bold px-4 py-2 text-white"
                             href="#part2">Vision</a>
                     </li>
                     <li class="nav-item px-2">
-                        <a class="navbutton nav-link rounded-pill fw-bold text-white px-4 py-2"
+                        <a class="nav-link rounded-pill fw-bold text-white px-4 py-2"
                             href="{{ route('about') }}">About</a>
                     </li>
                     <li class="nav-item px-2">
-                        <a class="navbutton nav-link rounded-pill fw-bold text-white px-4 py-2"
+                        <a class="nav-link rounded-pill fw-bold text-white px-4 py-2"
                             href="{{ route('news') }}">Get Involved</a>
                     </li>
                     <li class="nav-item px-2">
-                        <a class="navbutton nav-link rounded-pill fw-bold text-white px-4 py-2"
+                        <a class="nav-link rounded-pill fw-bold text-white px-4 py-2"
                             href="{{ route('trymenu') }}">Try Some Features</a>
                     </li>
                     @guest
                         @if (Route::has('login'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <li class="nav-item ">
+                                <a class="nav-link text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                         @endif
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link text-white   " href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
                         @endif
                     @else
                         <li class="nav-item">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </a>

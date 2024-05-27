@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card sticky">
     <div class="card-body">
         <h5 class="card-title card-text-color">Subscribe to our newsletter</h5>
         {{-- Email form, checkbox for subscription, and button --}}

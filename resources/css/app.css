@@ -35,14 +35,42 @@
     top: 0;
     z-index: 1000; /* Ensure it stays above other content */
 }
+/* part 0.5 */
+.part0_5{
+    min-height: 1000px;
+}
 
+.welcomepartbackground{
+    background: linear-gradient(to top, #8C314A  ,#3B295E,#242763);
+}
 
+.mmtitle{
+    /* Apply a linear gradient as the background */
+    background: linear-gradient(45deg, #8B8CD6,#CD2623,#EC9F9E);
+
+    /* Use WebKit background clip property to clip the background to the text */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Make the text color transparent to reveal the background gradient */
+    color: transparent;
+
+    /* You can also add other styles as needed */
+    font-weight: bold; /* For instance, make the text bold */
+    font-size: 5rem; /* Adjust the font size as desired */
+}
+
+.tryfeaturebutton{
+    background: linear-gradient(90deg, #cf3000,#fb6767,#EC9F9E);
+    border: 1px solid #cf3000;
+}
 /* part1 */
 .part1{
     min-height: 800px;
+    background: linear-gradient(to bottom, #8C314A  ,#3B295E,#242763);
 }
 
-.part1_1{
+/* .part1_1{
     transition: transform 0.3s ease;
 }
 .part1_1:hover{
@@ -51,8 +79,20 @@
 
 .underable:hover{
     text-decoration: none;
+} */
+
+.feature-card1{
+    background-color: #8C314A;
 }
 
+.feature-card2{
+    background-color: #3B295E;
+}
+
+
+.feature-card3{
+    background-color: #242763;
+}
 .mm{
 
     /* Apply a linear gradient as the background */
@@ -84,22 +124,6 @@
     background-color: var(--red2);
 }
 
-
-.navbutton:nth-of-type(1){
-    background-color: var(--blue2);
-}
-
-.navbutton:nth-of-type(2){
-    background-color: var(--blue2);
-}
-
-.navbutton:nth-of-type(3){
-    background-color: var(--blue2);
-}
-
-.navbutton:hover{
-    background-color: var(--red2);
-}
 
 .card-text-color{
     color: var(--blue2);
