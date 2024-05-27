@@ -88,11 +88,11 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item px-2">
-                        <a class="navbutton nav-link rounded-pill fw-bold text-white px-4 py-2"
+                        <a class="nav-link rounded-pill fw-bold text-white px-4 py-2"
                             href="{{ route('about') }}">About</a>
                     </li>
                     <li class="nav-item px-2">
-                        <a class="navbutton nav-link rounded-pill fw-bold text-white px-4 py-2"
+                        <a class="nav-link rounded-pill fw-bold text-white px-4 py-2"
                             href="{{ route('about') }}#part2">Vision</a>
                     </li>
                     <li class="nav-item px-2">
