@@ -41,12 +41,12 @@
 }
 
 .welcomepartbackground{
-    background: linear-gradient(to top, #8C314A  ,#3B295E,#242763);
+    background-color: #206aae;
 }
 
 .mmtitle{
     /* Apply a linear gradient as the background */
-    background: linear-gradient(45deg, #8B8CD6,#CD2623,#EC9F9E);
+    background: linear-gradient(45deg, #2023AE,#f7f7f7);
 
     /* Use WebKit background clip property to clip the background to the text */
     -webkit-background-clip: text;
@@ -61,13 +61,49 @@
 }
 
 .tryfeaturebutton{
-    background: linear-gradient(90deg, #cf3000,#fb6767,#EC9F9E);
-    border: 1px solid #cf3000;
+    background-color: #2023ae;
+    border: 1px solid #2023ae;
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Optional: add a slight movement */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sequence1, .sequence2, .sequence3, .sequence4 {
+    opacity: 0;
+}
+
+.sequence1 {
+    animation: fadeIn 1s forwards;
+    animation-delay: 0s;
+}
+
+.sequence2 {
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+}
+
+.sequence3 {
+    animation: fadeIn 1s forwards;
+    animation-delay: 2s;
+}
+
+.sequence4 {
+    animation: fadeIn 1s forwards;
+    animation-delay: 3s;
+}
+
 /* part1 */
 .part1{
     min-height: 800px;
-    background: linear-gradient(to bottom, #8C314A  ,#3B295E,#242763);
+    background-color:#206AAE;
 }
 
 .bga{
@@ -97,13 +133,13 @@
 } */
 
 .feature-card1{
-    background-color: #8C314A;
+    background-color: #1A1C8B;
 }
 
 .feature-card2{
-    background-color: #3B295E;
-}
+    background-color: #262AD1;
 
+}
 
 .feature-card3{
     background-color: #242763;
@@ -125,6 +161,20 @@
     font-size: 2rem; /* Adjust the font size as desired */
 }
 
+.sequencepart1_1, .sequencepart1_2{
+    opacity: 0;
+}
+
+.sequencepart1_1{
+    animation: fadeIn 1s forwards;
+    animation-delay: 0s;
+}
+
+.sequencepart1_2{
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+}
+
 .subbutton{
     background-color: var(--blue2);
     transition: background-color 0.3s;
@@ -144,10 +194,14 @@
     color: var(--blue2);
 }
 
+.our-feature{
+    font-size:4rem;
+}
+
 /* part2 */
 .part2{
     min-height:800px;
-    background: linear-gradient(to top, #8C314A  ,#3B295E,#242763);
+    background-color:#242763;
 }
 .part2_1{
     font-size:60px
@@ -162,7 +216,7 @@
     min-height: 850px;
     /* z-index: 1; */
     transition: top 0.3s ease;
-    background: linear-gradient(to top, #8C314A  ,#3B295E,#242763);
+    background: linear-gradient(to top, #4a90e2  ,#00bcd4,#242763);
 }
 
 .motto{
@@ -201,7 +255,7 @@
 
 
 .donationcard{
-    background: linear-gradient(to bottom, #8C314A  ,#3B295E,#242763);
+    background-color: #4a90e2;
     min-height: 900px;
 }
 
@@ -257,4 +311,7 @@
 }
 .card4{
     background-color: #000038;
+}
+.purchasebutton{
+    background-color: #b71c1c;
 }

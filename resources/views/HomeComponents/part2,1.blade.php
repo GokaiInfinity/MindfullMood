@@ -1,5 +1,5 @@
 <div class="lh-sm row mb-5 part2_1">
-    Vision & Priorities
+    Our Vision & Priorities
 </div>
 <div class="row d-flex">
 

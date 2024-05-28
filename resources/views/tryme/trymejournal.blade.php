@@ -37,7 +37,7 @@
                     <tr>
                         <th scope="col" class="col-1">Journal No</th>
                         <th scope="col" class="col-2">Title</th>
-                        <th scope="col" class="col-2">Date Created</th>
+                        <th scope="col" class="col-2">Time Created</th>
                         <th scope="col" class="col-2">Mood</th>
                         <th scope="col" class="col-2">Tags</th>
                         <th scope="col" class="col-2">Location</th>

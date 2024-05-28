@@ -20,6 +20,47 @@ function applySlideInAnimation() {
 // Attach the function to the window.onload event
 window.onload = applySlideInAnimation;
 
+document.addEventListener('DOMContentLoaded', function () {
+    const sequence1 = document.querySelector('.sequence1');
+    const sequence2 = document.querySelector('.sequence2');
+    const sequence3 = document.querySelector('.sequence3');
+    const sequence4 = document.querySelector('.sequence4');
+    
+    if (sequence1 && sequence2 && sequence3 && sequence4) {
+        setTimeout(function () {
+            sequence1.classList.add('appear');
+        }, 0);
+        setTimeout(function () {
+            sequence2.classList.add('appear');
+        }, 1000);
+        setTimeout(function () {
+            sequence3.classList.add('appear');
+        }, 2000);
+        setTimeout(function () {
+            sequence4.classList.add('appear');
+        }, 3000);
+    } else {
+        console.error('One or more elements not found');
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const sequence1_1 = document.querySelector('.sequencepart1_1');
+    const sequence1_2 = document.querySelector('.sequencepart1_2');
+    
+    
+    if (sequence1_1 && sequence1_2) {
+        setTimeout(function () {
+            sequence1.classList.add('appear');
+        }, 0);
+        setTimeout(function () {
+            sequence2.classList.add('appear');
+        }, 1000);
+    } else {
+        console.error('One or more elements not found');
+    }
+});
 
 //main page donation
 document.addEventListener('DOMContentLoaded', function() {
@@ -44,3 +85,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
