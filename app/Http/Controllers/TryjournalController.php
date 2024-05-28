@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\tryjournal;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class TryjournalController extends Controller
 {
@@ -14,9 +16,8 @@ class TryjournalController extends Controller
         $sort = in_array($request->query('sort'), $sortOptions) ? $request->query('sort') : 'date_created';
         $direction = $request->query('direction', 'desc');
 
-        $query = Tryjournal::orderBy($sort, $direction);
-
-        $trymejournals = $query->paginate(10);
+        $user = User::where('id',Auth::user()->id)->first();
+        $trymejournals = $user->tryjournals()->orderBy($sort, $direction)->paginate(10);
 
         return view('tryme.trymejournal', compact('trymejournals'));
     }
@@ -37,16 +38,26 @@ class TryjournalController extends Controller
             'title' => 'required',
             'content' => 'required',
             'date_created' => 'nullable|date_format:Y-m-d\TH:i',
+            'user_id' => '',
             'mood' => 'nullable|string',
             'tags' => 'nullable|string',
             'location' => 'nullable|string',
         ]);
+
+        $user_id = -1;
+
+        if (Auth::check()) {
+            $user_id = Auth::user()->id;
+        } else {
+            return redirect()->route('login')->with('error', 'You need to be logged in to create a journal.');
+        }
 
         // Create tryjournals
         Tryjournal::create([
             'title' => $request->title,
             'content' => $request->content,
             'date_created' => $request->date_created ?? now(),
+            'user_id' => $user_id,
             'mood' => $request->mood,
             'tags' => $request->tags,
             'location' => $request->location,

@@ -18,6 +18,8 @@ return new class extends Migration
             $table->text('content');
             $table->datetime('date_created')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->datetime('date_modified')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('mood')->nullable();
             $table->string('tags')->nullable();
             $table->string('location')->nullable();
