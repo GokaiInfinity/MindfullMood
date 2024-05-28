@@ -1,13 +1,20 @@
 @extends('layouts.app')
 
+@section('headscripts')
+<style>
+
+</style>
+@endsection
+
 @section('content')
+@vite('resources/css/app.css')
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card logincard-top">
                 <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="card-body">
+                <div class="card-body logincard-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
