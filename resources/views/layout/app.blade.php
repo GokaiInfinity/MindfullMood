@@ -11,6 +11,11 @@
     <title>MindfullMood</title>
 
     <link rel="stylesheet" href="css/app.css">
+
+    <!-- Scripts -->
+    @yield('headscripts')
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/headerfooter.css'])
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,12 +29,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@latest/dist/emoji-button.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/emoji-picker-element@latest/dist/emoji-picker-element.js"></script>
-
-
-
-    <!-- Scripts -->
-    @yield('headscripts')
-    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/headerfooter.css'])
 </head>
 
 <body>
@@ -46,11 +45,11 @@
                 </a> --}}
             </div>
 
-            {{-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="{{ __('Toggle navigation') }}">
-                <span class="navbar-toggler-icon"></span>
-            </button> --}}
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="{{ __('Toggle navigation') }}" style="filter: invert(1) brightness(2);">
+                <span class="navbar-toggler-icon" style="filter: brightness(2);"></span>
+            </button>
 
             {{-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
@@ -97,11 +96,12 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item px-2">
-                        <a class="nav-link fw-bold px-4 py-2 text-white" href="#part2">Vision</a>
+                        <a class="nav-link rounded-pill fw-bold text-white px-4 py-2"
+                            href="{{ route('about') }}">About</a>
                     </li>
                     <li class="nav-item px-2">
                         <a class="nav-link rounded-pill fw-bold text-white px-4 py-2"
-                            href="{{ route('about') }}">About</a>
+                            href="{{ route('about') }}#part2">Vision</a>
                     </li>
                     <li class="nav-item px-2">
                         <a class="nav-link rounded-pill fw-bold text-white px-4 py-2" href="{{ route('news') }}">Get
@@ -119,16 +119,26 @@
                         @endif
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link text-white   " href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
                         @endif
                     @else
-                        <li class="nav-item">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle text-white px-4 py-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }}
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
                             </a>
-                        </li>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
                     @endguest
                 </ul>
             </div>

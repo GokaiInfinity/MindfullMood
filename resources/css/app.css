@@ -106,6 +106,21 @@
     background-color:#206AAE;
 }
 
+.bga{
+    background: linear-gradient(to bottom, #8C314A  ,#3B295E,#242763);
+}
+
+.logincard-body{
+    background-color: #242763;
+    color: #FFFFFF; 
+    border: none; 
+}
+
+.logincard-top{
+    background-color: #8C314A; 
+    color: #FFFFFF;
+    border-bottom: none; 
+}
 /* .part1_1{
     transition: transform 0.3s ease;
 }

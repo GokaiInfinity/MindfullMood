@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class tryjournal extends Model
 {
@@ -21,6 +23,7 @@ class tryjournal extends Model
         'title',
         'content',
         'date_created',
+        'user_id',
         'mood',
         'tags',
         'location',
@@ -32,5 +35,9 @@ class tryjournal extends Model
         'font_format',
         'font_family',
     ];
+
+    public function user(): BelongsTo{
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
 
 }

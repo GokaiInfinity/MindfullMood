@@ -35,13 +35,13 @@ Route::get('/register',[RegisterController::class,'index'])->name('register');
 Route::get('/tryme',[TrymeController::class,'index'])->name('trymenu');
 
 //Try Me Journal Route
-Route::get('/trymejournal',[TryjournalController::class, 'index'])->name('trymejournal');
-Route::get('/trymejournal/{tryjournal}', [TryjournalController::class, 'show'])->name('trymejournal.show');
-Route::get('/trymejournal/addjournal/create',[TryjournalController::class, 'addjournalpage'])->name('trymejournal.create');
-Route::post('/trymejournal/addjournal/store',[TryjournalController::class, 'addjournal'])->name('trymejournal.store');
-Route::get('/trymejournal/edit/{tryjournal}', [TryjournalController::class, 'editjournal'])->name('trymejournal.edit');
-Route::put('/trymejournal/update/{tryjournal}', [TryjournalController::class, 'updatejournal'])->name('trymejournal.update');
-Route::delete('/trymejournal/destroy/{tj}', [TryjournalController::class, 'destroy'])->name('trymejournal.destroy');
+Route::get('/trymejournal',[TryjournalController::class, 'index'])->name('trymejournal')->middleware('auth');
+Route::get('/trymejournal/{tryjournal}', [TryjournalController::class, 'show'])->name('trymejournal.show')->middleware('auth');
+Route::get('/trymejournal/addjournal/create',[TryjournalController::class, 'addjournalpage'])->name('trymejournal.create')->middleware('auth');
+Route::post('/trymejournal/addjournal/store',[TryjournalController::class, 'addjournal'])->name('trymejournal.store')->middleware('auth');
+Route::get('/trymejournal/edit/{tryjournal}', [TryjournalController::class, 'editjournal'])->name('trymejournal.edit')->middleware('auth');
+Route::put('/trymejournal/update/{tryjournal}', [TryjournalController::class, 'updatejournal'])->name('trymejournal.update')->middleware('auth');
+Route::delete('/trymejournal/destroy/{tj}', [TryjournalController::class, 'destroy'])->name('trymejournal.destroy')->middleware('auth');
 
 //Try Me Psikolog Route
 Route::get('/trymepsikolog',[PsikologController::class, 'index'])->name('trymepsikolog');
