@@ -25,7 +25,7 @@ class ForumController extends Controller
     }
 
 
-    public function create()
+    public function addforumpage()
     {
         return view('tryme.createforum');
     }
