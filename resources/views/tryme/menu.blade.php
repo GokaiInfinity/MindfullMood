@@ -5,7 +5,7 @@
     <div class="container pt-5">
         <div class="col">
             <div class="row py-5">
-                <div class="fs-2 text-center fw-bold">
+                <div class="fs-2 text-center fw-bold text-white">
                     Try These Features
                 </div>
             </div>

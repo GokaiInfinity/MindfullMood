@@ -1,8 +1,9 @@
 @extends('layout.app')
 
-@vite('resources/css/forum.css')
+
 
 @section('content')
+@vite('resources/css/forum.css')
 <div class="row col-md-12 mt-5">
     <div class="col-md-2">
     </div>

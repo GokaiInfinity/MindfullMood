@@ -11,3 +11,12 @@
 .card:hover{
     animation: Zoom 0.3s forwards;
 }
+
+body{
+    background-color: #206aae;
+}
+
+.card{
+    background-color: #2f8de5;
+    color: #f2f2f2
+}
