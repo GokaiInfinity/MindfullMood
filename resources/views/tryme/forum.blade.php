@@ -11,7 +11,7 @@
         <h1 class="text-center text-white mx-4">MindfullMood Forum</h1>
     </div>
     <div class="col-md-2 mt-5">
-        <a href="{{ route('forum.create') }}" class="btn btn-primary float-right">Post a forum</a>
+        <a href="{{ route('forum.create') }}" class="btn  float-right" style="background-color: #0bae21; color: black;">+ Post a forum</a>
     </div>
 </div>
 
@@ -33,6 +33,7 @@
                                 <div class="card-body p-4">
                                     <h3 class="card-title">{{$forum->title}}</h3>
                                     <p class="card-text">{{$forum->content}}</p>
+                                    <p class="card-text"><small class="text-muted">Date Created/Updated: {{ $forum->date_created }}</small></p>
                                 </div>
                             </div>
                         </div>
