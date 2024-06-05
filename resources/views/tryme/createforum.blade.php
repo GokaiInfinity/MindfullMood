@@ -8,7 +8,7 @@
                 <div class="card-header fs-4 text-center">Create Forum</div>
 
                 <div class="card-body">
-                    <form action="{{ route('forum.store') }}" method="POST">
+                    <form action="{{ route('forum.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group ">
@@ -33,6 +33,11 @@
                             <label for="tags">Tags:</label>
                             <input type="text" class="form-control" id="tags" name="tags"
                                 value="{{ old('tags') }}" placeholder="Enter tags separated by commas(Optional)">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="attachments">Attachments</label>
+                            <input type="file" class="form-control" id="attachments" name="attachments">
                         </div>
 
                         <button type="submit" class="btn btn-primary my-3">Post Forum</button>

@@ -52,6 +52,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'pfp' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'],
         ]);
     }
 
@@ -63,7 +64,12 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $profileImage = $data['pfp'];
+        $imagePath = $profileImage->store('profile_pictures', 'public');
+
+        // $data['pfp'] = $data['pfp'] ?? 'default.png';
         return User::create([
+            'pfp' => $imagePath,
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),

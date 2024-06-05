@@ -44,33 +44,35 @@ class ForumController extends Controller
             'date_modified' => 'nullable|date_format:Y-m-d\TH:i',
             'mood' => 'nullable|string',
             'tags' => 'nullable|string',
-            'attachments' => 'nullable|string',
+            'attachments' => 'nullable|file|mimes:jpeg,png,jpg,gif,svg,pdf,doc,docx,zip|max:2048',
         ]);
 
-        $user_id = -1;
-
-        if (Auth::check()) {
-            $user_id = Auth::user()->id;
-        } else {
+        if (!Auth::check()) {
             return redirect()->route('login')->with('error', 'You need to be logged in to create a journal.');
         }
 
+        $user = Auth::user();
+        $attachmentPath = null;
+
+        if ($request->hasFile('attachments')) {
+            $attachmentPath = $request->file('attachments')->store('attachments', 'public');
+        }
 
         Forum::create([
             'title' => $request->title,
             'content' => $request->content,
-            'username' => User::where('id', $user_id)->first()->name,
-            'pfp' => User::where('id', $user_id)->first()->pfp,
+            'username' => $user->name,
+            'pfp' => $user->pfp,
             'date_created' => $request->date_created ?? now(),
             'date_modified' => $request->date_modified ?? now(),
             'mood' => $request->mood,
             'tags' => $request->tags,
-            'attachments' => $request->attachments,
+            'attachments' => $attachmentPath,
             'deleted' => 0,
             'version' => 1,
         ]);
 
-        return redirect()->route('forum');
+        return redirect()->route('forum')->with('success', 'Journal created successfully.');
     }
 
 

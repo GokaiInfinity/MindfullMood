@@ -50,7 +50,7 @@ Route::get('/trymepsikolog',[PsikologController::class, 'index'])->name('trymeps
 Route::get('/forum',[ForumController::class, 'index'])->name('forum');
 Route::get('/forum/{forum}', [ForumController::class, 'show'])->name('forum.show');
 Route::get('/forum/addforum/create',[ForumController::class, 'addforumpage'])->name('forum.create');
-Route::post('/forum/addforum/store',[ForumController::class, 'addforum'])->name('forum.store');
+Route::post('/forum/addforum/store',[ForumController::class, 'store'])->name('forum.store');
 Route::get('/forum/edit/{forum}', [ForumController::class, 'editforum'])->name('forum.edit');
 Route::put('/forum/update/{forum}', [ForumController::class, 'updateforum'])->name('forum.update');
 Route::delete('/forum/destroy/{f}', [ForumController::class, 'destroy'])->name('forum.destroy');

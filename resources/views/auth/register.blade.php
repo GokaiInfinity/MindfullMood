@@ -9,8 +9,45 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body logincard-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
+                        <div class="row mb-3">
+                            <label for="image" class="col-md-4 col-form-label text-md-end">{{ __('Profile Picture') }}</label>
+
+                            <div class="col-md-6">
+                                <div style="display: flex; justify-content: center; align-items: center;">
+                                    <img id="image-preview" src="" alt="Profile Picture" class="rounded-circle mb-2" style="width: 100px; height: 100px; object-fit: cover; max-width: 100%; overflow: hidden; display: none;">
+                                </div>
+                                <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="pfp" accept="image/*" required>
+
+                                @error('image.*')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
+                            </div>
+                        </div>
+                        <script>
+                            const imageInput = document.querySelector('#image');
+                            const imagePreview = document.querySelector('#image-preview');
+
+                            imageInput.addEventListener('change', function() {
+                                const file = imageInput.files[0];
+                                if (file) {
+                                    const reader = new FileReader();
+
+                                    reader.onload = function() {
+                                        imagePreview.src = reader.result;
+                                        imagePreview.style.display = 'block';
+                                    }
+
+                                    reader.readAsDataURL(file);
+                                }
+                            });
+                        </script>
+
+
 
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
