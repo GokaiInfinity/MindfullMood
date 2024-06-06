@@ -50,23 +50,23 @@
                             <div class="form-group ">
                                 <label for="font_family">Font Family:</label>
                                 <select class="form-control" id="font_family" name="font_family">
-                                    <option value="Arial" {{ old('font_family') === 'Arial' ? 'selected' : '' }}>Arial
+                                    <option value="Arial" {{ old('font_family') === 'Arial' ? 'selected' : '' }} style="font-family: Arial;">Arial
                                     </option>
-                                    <option value="Calibri" {{ old('font_family') === 'Calibri' ? 'selected' : '' }}>Calibri
+                                    <option value="Calibri" {{ old('font_family') === 'Calibri' ? 'selected' : '' }} style="font-family: Calibri;">Calibri
                                     </option>
                                     <option value="Comic Sans MS"
-                                        {{ old('font_family') === 'Comic Sans MS' ? 'selected' : '' }}>Comic Sans MS
+                                        {{ old('font_family') === 'Comic Sans MS' ? 'selected' : '' }} style="font-family: Comic Sans MS;">Comic Sans MS
                                     </option>
                                     <option value="Courier New"
-                                        {{ old('font_family') === 'Courier New' ? 'selected' : '' }}>Courier New</option>
-                                    <option value="Georgia" {{ old('font_family') === 'Georgia' ? 'selected' : '' }}>
+                                        {{ old('font_family') === 'Courier New' ? 'selected' : '' }} style="font-family: Courier New;">Courier New</option>
+                                    <option value="Georgia" {{ old('font_family') === 'Georgia' ? 'selected' : '' }} style="font-family: Georgia;">
                                         Georgia</option>
-                                    <option value="Tahoma" {{ old('font_family') === 'Tahoma' ? 'selected' : '' }}>Tahoma
+                                    <option value="Tahoma" {{ old('font_family') === 'Tahoma' ? 'selected' : '' }} style="font-family: Tahoma;">Tahoma
                                     </option>
                                     <option value="Times New Roman"
-                                        {{ old('font_family') === 'Times New Roman' ? 'selected' : '' }}>Times New Roman
+                                        {{ old('font_family') === 'Times New Roman' ? 'selected' : '' }} style="font-family: Times New Roman;">Times New Roman
                                     </option>
-                                    <option value="Verdana" {{ old('font_family') === 'Verdana' ? 'selected' : '' }}>
+                                    <option value="Verdana" {{ old('font_family') === 'Verdana' ? 'selected' : '' }} style="font-family: Verdana;">
                                         Verdana</option>
                                 </select>
                             </div>

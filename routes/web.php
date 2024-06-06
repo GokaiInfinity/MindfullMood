@@ -9,6 +9,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TrymeController;
 use App\Http\Controllers\DonateController;
 use App\Http\Controllers\JournalController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MainPageController;
 use App\Http\Controllers\PsikologController;
 use App\Http\Controllers\RegisterController;
@@ -56,5 +57,8 @@ Route::put('/forum/update/{forum}', [ForumController::class, 'updateforum'])->na
 Route::delete('/forum/destroy/{f}', [ForumController::class, 'destroy'])->name('forum.destroy');
 
 Auth::routes();
+
+//Profile Route
+Route::get('/profile',[ProfileController::class, 'index'])->name('profile')->middleware('auth');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -1,0 +1,18 @@
+.bg{
+    background-color: #206aae;
+    background-size: cover; 
+    min-height: 100vh; 
+    min-width: 100%;
+}
+
+.profilecard-body{
+    background-color: #242763;
+    color: #FFFFFF; 
+    border: none; 
+}
+
+.profilecard-top{
+    background-color: #14163C;
+    color: #FFFFFF;
+    border-bottom: none; 
+}
