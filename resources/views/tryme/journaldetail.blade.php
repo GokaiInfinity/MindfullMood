@@ -3,7 +3,7 @@
 @section('content')
 @vite('resources/css/tryme.css')
 {{-- Generate A Journal Detail --}}
-<div class="container">
+<div class="container bg-menu">
     <div class="row">
         <div class="col-md-8 offset-md-2 py-5 my-5">
             <a href="{{ route('trymejournal') }}" class="btn btn-primary mb-3">< Back</a>

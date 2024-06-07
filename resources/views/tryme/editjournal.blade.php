@@ -2,7 +2,7 @@
 
 @section('content')
 @vite(['resources/js/tryjournal.js', 'resources/css/trymejournal.css'])
-    <div class="container my-5 py-5">
+    <div class="container my-5 py-5 bg">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card custom-card">

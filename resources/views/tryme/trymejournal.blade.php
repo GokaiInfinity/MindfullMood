@@ -2,7 +2,7 @@
 
 @section('content')
     @vite(['resources/css/trymejournal.css', 'resources/js/tryjournal.js'])
-    <div class="mt-5">
+    <div class="mt-5 bg">
         <div class="col-12 pt-5">
             <div class="row">
                 <div class="col-10">
