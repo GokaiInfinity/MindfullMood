@@ -25,8 +25,10 @@
                         <div class="row no-gutters ">
                             <div class="col-md-4 p-3 ">
                                 <div class="row d-flex justify-content-center">
-                                    <img src="{{ asset('storage/' . $forum->pfp) }}" class="card-img w-75 rounded-circle py-2 overflow-hidden" alt="Profile Picture">
-                                    <h3 class="card-text text-center">{{$forum->username}}</h3>
+                                    <img src="{{ asset('storage/' . $forum->pfp) }}" class="card-img rounded-circle py-2 overflow-hidden"
+                                     style="width: 200px; height: 200px;"
+                                    alt="Profile Picture">
+                                    <h3 class="card-text text-center mt-3">{{$forum->username}}</h3>
                                 </div>
                             </div>
                             <div class="col-md-8">

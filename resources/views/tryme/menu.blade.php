@@ -2,7 +2,7 @@
 
 @section('content')
     @vite('resources/css/tryme.css')
-    <div class="container pt-5">
+    <div class="container pt-5 bg-menu">
         <div class="col">
             <div class="row py-5">
                 <div class="fs-2 text-center fw-bold text-white">

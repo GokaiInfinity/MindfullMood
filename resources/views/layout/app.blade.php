@@ -125,6 +125,8 @@
                     @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle text-white px-4 py-2" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <img src="{{ asset('storage/' . Auth::user()->pfp) }}" class=" rounded-circle" alt="Profile Picture"
+                        style="width: 20px; height: 20px;">
                             {{ Auth::user()->name }}
                         </a>
 

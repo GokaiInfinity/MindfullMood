@@ -26,7 +26,7 @@
 </head>
 
 <body style="
-    background: linear-gradient(to top, #8C314A  ,#3B295E,#242763);
+    background-color: #206aae;
     background-size: cover; 
     min-height: 100vh; 
     min-width: 100%;

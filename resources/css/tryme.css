@@ -8,6 +8,13 @@
 
 }
 
+.bg-menu{
+    background-color: #206aae;
+    background-size: cover; 
+    min-height: 100vh; 
+    min-width: 100%;
+}
+
 .card:hover{
     animation: Zoom 0.3s forwards;
 }

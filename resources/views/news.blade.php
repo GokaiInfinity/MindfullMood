@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="col px-5 py-5">
+<div class="col px-5 py-5" style="background-color: #206aae;">
     <div class="row mx-auto py-4">
         <div class="col-sm-4">
             <div class="card border-0 shadow" style="border-radius: 0;">
