@@ -13,7 +13,7 @@
 
                     <h3 class="card-title" style="color: {{ $tryjournal->font_color }}; font-family: {{ $tryjournal->font_family }}; font-style: {{ $tryjournal->font_format }}; ">{{ $tryjournal->title }}</h3>
                     <hr>
-                    <p class="card-text" style="color: {{ $tryjournal->font_color }}; font-family: {{ $tryjournal->font_family }}; font-style: {{ $tryjournal->font_format }}; ">{{ $tryjournal->content }}</p>
+                    <p class="card-text" style="color: {{ $tryjournal->font_color }}; font-family: {{ $tryjournal->font_family }}; font-style: {{ $tryjournal->font_format }}; min-height: 20rem">{{ $tryjournal->content }}</p>
                     <hr>
                     <p class="card-text"><strong>Mood:</strong> {{ $tryjournal->mood }}</p>
                     <p class="card-text"><strong>Tags:</strong> {{ $tryjournal->tags }}</p>
